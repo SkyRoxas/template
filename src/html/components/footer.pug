@@ -1,2 +1,13 @@
+mixin footerMenuItem(name,href)
+  li.pet
+    a(href=href)= name
+
 footer#footer
-  h1 footer
+  wrap
+    div.menu
+      ul
+        +footerMenuItem('關於貝果bar','/')
+        +footerMenuItem('使用條款','/')
+        +footerMenuItem('隱私權政策','/')
+        +footerMenuItem('聯絡我們','/')
+          
