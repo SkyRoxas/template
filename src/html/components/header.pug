@@ -1,3 +1,12 @@
+mixin headerMenuItem(name,href)
+  li.pet
+    a(href=href)= name
 
 header#header
-  h1 header
+  wrap
+    div.menu
+      ul
+        +headerMenuItem('首頁','/')
+        +headerMenuItem('瀏覽直播','/')
+        +headerMenuItem('教學','/')
+          
