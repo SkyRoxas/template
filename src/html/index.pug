@@ -1,22 +1,15 @@
 doctype html
 html
   head
+    include components/head/script
     title demo
   body
     include components/header
-    .title-with-text
-        h2 熱門直播
-        span Feature
-    .title-with-text
-        h2 金額排行榜
-        span TOP 5 RANKING
-    .title-with-text
-        h2 人氣排行榜
-        span 24H HOT HOT
-    .title-with-text
-        h2 進行中的直播
-        span STREAMING
-    h2 經典案例
-    
-    h2 熱門直播主
+    include regions/slideshow
+    include regions/carousel
+    include regions/ranking
+    include regions/24hhot
+    include regions/streaming
+    include regions/case
+    include regions/hosts
     include components/footer
