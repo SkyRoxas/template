@@ -70,8 +70,29 @@
 "use strict";
 
 
-var test = '123';
-console.log(test);
+var _slideshow = __webpack_require__(1);
+
+var _slideshow2 = _interopRequireDefault(_slideshow);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _slideshow2.default)();
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var slideshow = function slideshow() {
+  console.log(123);
+};
+
+exports.default = slideshow;
 
 /***/ })
 /******/ ]);

@@ -1,2 +1,3 @@
-const test = '123'
-console.log(test)
+import slideshow from './front/slideshow'
+
+slideshow()
