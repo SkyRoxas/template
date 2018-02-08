@@ -1,6 +1,6 @@
 mixin rankList(rank,icon,amount)
   li.item.d-flex.flex-wrap.align-items-center.p-2
-    .field-rank.align-self-start.p-3= rank
+    .field-rank.d-flex.justify-content-center.align-items-center.align-self-start= rank
     .field-image
       img(src="./images/rank.png")
     .wrap.ml-3.col-xs-12
@@ -29,8 +29,8 @@ mixin rankList(rank,icon,amount)
           +rankList(5,'./images/icon/money.png','$23,456,789')
       .wrap.d-flex.flex-column.align-items-lg-end.col-lg-5.col-12
         h2.mb-5.text-right
-           span.d-block.mb-3 金額排行榜
-           div TOP 5 RANKING
+           span.d-block.mb-3 人氣排行榜
+           div 24H HOT HOT
         ul.shadow
           +rankList(1,'./images/icon/people.png','6789')
           +rankList(2,'./images/icon/people.png','6789')

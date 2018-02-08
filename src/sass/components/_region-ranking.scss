@@ -7,6 +7,10 @@
     li{
       .field-rank{
         background: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        height: 40px;
+        width: 40px;
       }
       .field-image{
         img{
@@ -23,6 +27,9 @@
     }
     li:first-child{
       background: $main-first;
+      .field-rank{
+          color: #FF2600;
+      }
       .field-nav{
         background: $main-third;
         color: #fff;
