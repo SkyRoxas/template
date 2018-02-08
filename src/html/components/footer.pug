@@ -4,10 +4,9 @@ mixin footerMenuItem(name,href)
 
 footer#footer
   .container
-    wrap.d-flex
-      div.menu
-        ul.d-flex
-          +footerMenuItem('關於貝果bar','/')
-          +footerMenuItem('使用條款','/')
-          +footerMenuItem('隱私權政策','/')
-          +footerMenuItem('聯絡我們','/')
+    div.menu
+      ul.row.justify-content-center
+        +footerMenuItem('關於貝果bar','/')
+        +footerMenuItem('使用條款','/')
+        +footerMenuItem('隱私權政策','/')
+        +footerMenuItem('聯絡我們','/')

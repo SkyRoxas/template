@@ -1,0 +1,41 @@
+footer {
+  background-color: black;
+  overflow: hidden;
+  
+  .container {
+    padding: 20px 15px;
+
+    .menu {
+      ul {
+        margin: 0 -30px;
+
+        > li {
+          padding: 0 30px;
+          position: relative;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 100%;
+            background-color: white;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+
+          a {
+            font-size: 14px;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
