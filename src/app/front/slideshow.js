@@ -1,5 +1,11 @@
+import $ from 'jQuery'
+import slick from 'slick-carousel'
+
 const slideshow = ()=>{
-  console.log(123)
+  $(document).ready(function(){
+    console.log($('#header').html())
+    //console.log(slick)
+  })
 }
 
 export default slideshow
