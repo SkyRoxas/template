@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@import "base/reset";
 @import "vendors/bootstrap/bootstrap";
+@import "base/_import";
 @import "layout/_import";
-@import "components/import";
+@import "components/_import";
 
 body
 {

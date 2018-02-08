@@ -1,0 +1,26 @@
+.region-carousel{
+  .slide-carousel{
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .slick-list{
+    padding: 0px!important;
+  }
+  .field-content{
+    p{
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+  .field-category{
+    a{
+      display: flex;
+      align-items: center;
+      background: #0C5E65;
+      color: #fff;
+      height: 100%;
+      padding: 40px 30px;
+    }
+  }
+}
