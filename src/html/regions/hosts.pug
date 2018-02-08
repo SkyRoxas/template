@@ -1,21 +1,22 @@
 mixin hosts
   li.col
-    .field-image
-      img(src="./images/hosts.png")
-    .field-title
+    .field-image.d-flex.justify-content-center.mb-3
+      div
+        img(src="./images/hosts.png" width="150px")
+    .field-title.mb-3
       h3 ARROW WU
     .field-user
       span id / 3849128732
 
-.region-hosts.bg-second
+.region-hosts.bg-second.py-5
   .container
     h2 熱門直播主
-    ul.row
+    ul.row.mb-5
       +hosts
       +hosts
       +hosts
       +hosts
-    ul.row
+    ul.row.mb-5
       +hosts
       +hosts
       +hosts

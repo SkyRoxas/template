@@ -1,0 +1,16 @@
+h2{
+  max-width: 450px;
+  width: 100%;
+  text-align: left;
+  div{
+    position: relative;
+    &:before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 5px;
+      background: $main-second;
+      margin-bottom: 5px;
+    }
+  }
+}

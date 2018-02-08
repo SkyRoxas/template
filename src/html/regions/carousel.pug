@@ -1,38 +1,46 @@
 mixin carouselItem(src)
-    div
-      .field-image
-        img(src=src)
-      .wrap.d-flex.justify-content-between.bg-white
-        .wrap.d-flex.align-items-center
-          .field-perfile
-            img(src="./images/icon/user.png")
-          .field-user.mr-5
-            h3 ARROW WU
-            span 432,422
-          .field-content.ml-5
-            p Type something
-        .wrap.d-flex
-          .field-amount.d-flex.align-items-center.mr-5
-            img(src="./images/icon/money.png")
-            span 122,234,890
-          .field-category
-            a 公益
-          
-        
-mixin carouselNav(src)
-    div.col
+  div
+    .field-image
       img(src=src)
+    .wrap.d-flex.justify-content-between.bg-white
+      .wrap.d-flex.align-items-center
+        .field-perfile
+          img(src="./images/icon/user.png")
+        .field-user.mr-5
+          h3 ARROW WU
+          span 432,422
+        .field-content.ml-5
+          p Type something
+      .wrap.d-flex
+        .field-amount.d-flex.align-items-center.mr-5
+          img(src="./images/icon/money.png")
+          span 122,234,890
+        .field-category
+          a 公益
 
-.region-carousel.bg-second
-    .container
-      h2 熱門直播
-      span Feature
-      .slide-carousel
-        ul.slider-for.mb-4
-          +carouselItem("./images/carousel.png")
-          +carouselItem("./images/carousel.png")
-          +carouselItem("./images/carousel.png")
-        ul.slider-nav.row
-          +carouselNav("./images/carousel.png")
-          +carouselNav("./images/carousel.png")
-          +carouselNav("./images/carousel.png")
+
+mixin carouselNav(src)
+  div.col
+    .field-image.mb-3
+      img(src=src)
+    .wrap.d-flex.justify-content-center
+      .field-perfile
+        img(src="./images/icon/user.png" width="50px")
+      .field-user.mr-5
+        h3 ARROW WU
+        span 432,422
+
+.region-carousel.bg-second.pb-5
+  .container
+    h2.mb-5 
+       span.d-block.mb-3 熱門直播
+       div Feature
+    .slide-carousel.pb-5
+      ul.slider-for.mb-4
+        +carouselItem("./images/carousel.png")
+        +carouselItem("./images/carousel.png")
+        +carouselItem("./images/carousel.png")
+      ul.slider-nav.row
+        +carouselNav("./images/carousel.png")
+        +carouselNav("./images/carousel.png")
+        +carouselNav("./images/carousel.png")
