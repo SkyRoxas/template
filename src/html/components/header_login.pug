@@ -1,0 +1,41 @@
+mixin headerMenuItem(name,href)
+  li.menu-item
+    a.px-5(href=href)= name
+
+header#header
+  div.header_wrapper
+    div.row.justify-content-between
+      div.left_links.col-auto
+        ul.d-flex
+          +headerMenuItem('首頁','/')
+          +headerMenuItem('瀏覽直播','/')
+          +headerMenuItem('教學','/')
+      div.logo.col-auto
+        div.img_wrap
+          img(src="./images/logo.png" width="250px")
+      div.right_links.col-auto
+        div.d-flex
+          div.search
+            form
+              input.search_field(type="text" placeholder="search")
+              input.submit(type="button")
+          div.has-children
+            a(href="/")
+              div.img_wrap
+                img(src="./images/icon/avatar.png")
+              span.username aarown wu
+            ul.sub-menu
+              li.sub-menu-item
+                a(href="/")
+                  img(src="./images/icon/member-center.png")
+                  span 會員中心
+              li.sub-menu-item
+                a(href="/")
+                  img(src="./images/icon/live.png")
+                  span 我要直播
+              li.sub-menu-item
+                a(href="/")
+                  img(src="./images/icon/logout.png")
+                  span 會員登出
+          a(href="/")
+            img(src="./images/company.png" width="180px")

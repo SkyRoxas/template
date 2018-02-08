@@ -1,3 +1,199 @@
-#header{
-  
+#header {
+  .header_wrapper {
+    // overflow: hidden;
+    .left_links {
+      > ul {
+        height: 100%;
+
+        > li {
+          > a {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            text-decoration: none;
+            color: #000000;
+            position: relative;
+            transition: all 0.5s;
+            padding: 0 35px;
+
+            &::after {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              display: block;
+              content: "";
+              width: 100%;
+              height: 4px;
+              background-color: #FFAB4C;
+              opacity: 0;
+              transition: opacity 0.8s;
+            }
+
+            &.active,
+            &:hover {
+              color: #FFAB4C;
+
+              &::after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .right_links {
+      .d-flex {
+        .search {
+          form {
+            .search_field {
+              position: absolute;
+              right: 96%;
+              width: 0%;
+              height: 100%;
+              background-color: #F4F4F4;
+              border: none;
+              padding: 0px;
+              font-size: 14px;
+              transition: all .5s;
+              max-width: 300px;
+
+              &.active {
+                width: 100%;
+                padding-left: 15px;
+              }
+              &::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                color: #FFAB4C;/* search: */;
+              }
+
+              &::-moz-placeholder {
+                /* Firefox 19+ */
+                color: #FFAB4C;
+              }
+
+              &:-ms-input-placeholder {
+                /* IE 10+ */
+                color: #FFAB4C;
+              }
+
+              &:-moz-placeholder {
+                /* Firefox 18- */
+                color: #FFAB4C;
+              }
+            }
+
+            .submit {
+              position: relative;
+              z-index: 1;
+              padding: 0;
+              width: 80px;
+              height: 80px;
+              background-image: url("/images/search.png");
+              background-position: center;
+              border: none;
+              background-size: contain;
+              appearance: button;
+              -moz-appearance: button;
+              /* Firefox */
+              -webkit-appearance: button;
+              /* Safari 和 Chrome */
+            }
+          }
+        }
+
+        .register_login {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          padding: 0 20px;
+          color: #000000;
+          /* Rectangle-8: */
+          background: #F9E0A4;
+        }
+
+        .has-children {
+          padding: 0 30px;
+          background: #F9E0A4;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: #FFAB4C;
+            opacity: 0;
+            transition: opacity 0.8s;
+          }
+
+          &:hover {
+            &::after {
+              opacity: 1;
+            }
+
+            .sub-menu {
+              display: block;
+            }
+          }
+
+          a {
+            text-align: center;
+
+            img {
+              margin: 0 auto;
+            }
+
+            .username {
+              /* aarown wu: */
+              font-size: 14px;
+              color: #000000;
+              margin-top: 5px;
+              display: block;
+            }
+          }
+
+          .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1;
+            text-align: center;
+
+            li {
+              border-bottom: 1px solid #F4F4F4;
+
+              a {
+                font-size: 14px;
+                color: #000000;
+                display: flex;
+                padding: 20px 10px;
+                justify-content: space-around;
+
+                img {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
