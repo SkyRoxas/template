@@ -1,9 +1,9 @@
 mixin rankList(rank,icon,amount)
-  li.item.d-flex.align-items-center.p-2
+  li.item.d-flex.flex-wrap.align-items-center.p-2
     .field-rank.align-self-start.p-3= rank
     .field-image
       img(src="./images/rank.png")
-    .wrap.ml-3
+    .wrap.ml-3.col-xs-12
       .field-title.text-left.mb-2 title
       .wrap.d-flex.align-items-center
         .field-prefile
@@ -16,8 +16,8 @@ mixin rankList(rank,icon,amount)
 
 .region-ranking.pt-3.pb-5
   .container
-    .d-flex.justify-content-between.mb-5
-      .wrap
+    .row.d-flex.justify-content-between.mb-5.flex-wrap
+      .wrap.d-flex.flex-column.col-lg-5.col-12
         h2.mb-5 
            span.d-block.mb-3 金額排行榜
            div TOP 5 RANKING
@@ -27,7 +27,7 @@ mixin rankList(rank,icon,amount)
           +rankList(3,'./images/icon/money.png','$23,456,789')
           +rankList(4,'./images/icon/money.png','$23,456,789')
           +rankList(5,'./images/icon/money.png','$23,456,789')
-      .wrap.d-flex.flex-column.align-items-end
+      .wrap.d-flex.flex-column.align-items-lg-end.col-lg-5.col-12
         h2.mb-5.text-right
            span.d-block.mb-3 金額排行榜
            div TOP 5 RANKING

@@ -13536,6 +13536,7 @@ var carousel = function carousel() {
       slidesToScroll: 1,
       arrows: false,
       fade: true,
+      zIndex: 1,
       asNavFor: '.slider-nav'
     });
     (0, _jquery2.default)('.slider-nav').slick({

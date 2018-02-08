@@ -1,5 +1,5 @@
 mixin caseList
-  li.item.col-4.mb-5
+  li.item.col-lg-4.col-12.mb-5
     .wrap.shadow
       .field-image
         img(src="./images/case.png")
@@ -21,7 +21,9 @@ mixin caseList
   
 .region-case
   .container
-    h2 經典案例
+    div.d-flex.justify-content-center.my-5
+      h2.text-center.my-5
+        span.underLine 經典案例
     ul.row
       +caseList
       +caseList
