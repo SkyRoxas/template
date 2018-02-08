@@ -1,3 +1,34 @@
+mixin carouselItem(src)
+    div
+      .field-image
+        img(src=src)
+      .wrap.d-flex
+        .field-perfile
+          img(src="./images/icon/user.png")
+        .field-user
+          h3 ARROW WU
+          span 432,422
+        .field-content
+          p Type something
+        .field-amount
+          img(src="./images/icon/money.png")
+          span 122,234,890
+        .field-category
+          div 公益
+          
+        
+mixin carouselNav(src)
+    img(src=src)
+
 .title-with-text
-    h2 熱門直播
-    span Feature
+    .container
+      h2 熱門直播
+      span Feature
+      .slider-for
+        +carouselItem("./images/carousel.png")
+        +carouselItem("./images/carousel.png")
+        +carouselItem("./images/carousel.png")
+      ul.slider-nav
+        +carouselNav("./images/carousel.png")
+        +carouselNav("./images/carousel.png")
+        +carouselNav("./images/carousel.png")

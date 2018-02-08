@@ -1,6 +1,9 @@
-@charset 'UTF-8';
-@import 'base/reset';
-@import 'components/import';
+@charset "UTF-8";
+@import "base/reset";
+@import "vendors/bootstrap/bootstrap";
+@import "layout/_import";
+@import "components/import";
+
 body
 {
     font-family: Arial, Helvetica, sans-serif;

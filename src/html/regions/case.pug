@@ -1,1 +1,30 @@
+mixin caseList
+  li.item.col-4
+    .field-image
+      img(src="./images/case.png")
+    .wrap
+      .field-title
+        h3 小白獅壯遊計畫
+      .field-content
+        p 小時候我們看過多拉A夢的漫畫，對他拿隨身攜帶的百寶袋記憶猶新，雖然造型小巧，但是簡單方便
+    .wrap.d-flex
+      div.field-user.d-flex.align-items-center
+        img(src="./images/icon/user.png")
+        span @ arrow wu
+      div.field-money.d-flex.align-items-center
+        img(src="./images/icon/money.png")
+        span $23,456,789
+      div.field-people.d-flex.align-items-center
+        img(src="./images/icon/people.png")
+        span 6,789
+      
+      
 h2 經典案例
+  .container
+    ul.row
+      +caseList
+      +caseList
+      +caseList
+      +caseList
+      +caseList
+      +caseList

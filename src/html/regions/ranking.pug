@@ -1,3 +1,35 @@
+mixin rankList(rank,icon,amount)
+  li.item.d-flex.align-items-center
+    .field-rank.align-self-start.p-3= rank
+    .field-image
+      img(src="./images/rank.png")
+    .wrap
+      .field-title.text-left 
+        h3 title
+      .wrap.d-flex.align-items-center
+        .field-prefile
+          img(src="./images/icon/user.png")
+        .filed-user @ arrown wu
+        .field-nav.d-flex.align-items-center
+          div
+            img(src=icon)
+          span(style="white-space:nowrap")= amount
+
 .title-with-text
+  .container
     h2 金額排行榜
     span TOP 5 RANKING
+    .d-flex.justify-content-between
+      ul
+        +rankList(1,'./images/icon/money.png','$23456')
+        +rankList(2,'./images/icon/money.png','$23456')
+        +rankList(3,'./images/icon/money.png','$23456')
+        +rankList(4,'./images/icon/money.png','$23456')
+        +rankList(5,'./images/icon/money.png','$23456')
+      ul
+        +rankList(1,'./images/icon/people.png','6789')
+        +rankList(2,'./images/icon/people.png','6789')
+        +rankList(3,'./images/icon/people.png','6789')
+        +rankList(4,'./images/icon/people.png','6789')
+        +rankList(5,'./images/icon/people.png','6789')
+    

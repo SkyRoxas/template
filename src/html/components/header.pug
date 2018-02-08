@@ -1,12 +1,27 @@
 mixin headerMenuItem(name,href)
-  li.pet
-    a(href=href)= name
+  li.menu-item
+    a.d-block.px-5(href=href)= name
 
 header#header
-  wrap
-    div.menu
-      ul
+  wrap.row.no-gutters.align-items-center
+    div.col.menu
+      ul.d-flex
         +headerMenuItem('首頁','/')
         +headerMenuItem('瀏覽直播','/')
         +headerMenuItem('教學','/')
+    div.col.d-flex.justify-content-center
+      .logo
+        img(src="./images/logo.png" width="250px")
+    div.col.d-flex.justify-content-end.menu-second
+      ul.d-flex
+        li.menu-item
+          a(href="/")
+            img(src="./images/search.png" width="100px")
+        li.menu-item
+          a(href="/") 註冊/登入
+        li.menu-item
+          a(href="/")
+            img(src="./images/company.png" width="250px")
+          
+    
           

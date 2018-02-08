@@ -14,13 +14,13 @@
       js: './src/app/**/*.js',
       sass: './src/sass/**/*.scss',
       html: './src/html/**/*.pug',
-      image: './src/images**//*.*'
+      image: './src/images/**/*.*'
     },
     dest: {
       js: './dest/js',
       sass: './dest/css/',
       html: './dest/',
-      image: './dest/'
+      image: './dest/images'
     }
   }
 

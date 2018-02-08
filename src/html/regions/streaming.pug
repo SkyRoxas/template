@@ -1,3 +1,27 @@
+mixin streamingList()
+  li.col-3
+    .field-image
+      img(src="/images/streaming.png")
+    .wrap.d-flex.align-items-center
+      .field-perfile
+        img(src="/images/icon/user.png")
+      .wrap
+        .field-title
+          h3 活動名稱
+        .field-user id / 直播主名稱
+      
+      
 .title-with-text
+  .container
     h2 進行中的直播
     span STREAMING
+    div
+      ul.row
+        +streamingList
+        +streamingList
+        +streamingList
+        +streamingList
+        +streamingList
+        +streamingList
+        +streamingList
+        +streamingList

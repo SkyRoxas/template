@@ -1,10 +1,9 @@
-import $ from 'jQuery'
+import $ from 'jquery'
 import slick from 'slick-carousel'
 
 const slideshow = ()=>{
   $(document).ready(function(){
-    console.log($('#header').html())
-    //console.log(slick)
+    $('#big_slick').slick()
   })
 }
 
