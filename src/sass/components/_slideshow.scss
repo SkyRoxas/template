@@ -1,0 +1,107 @@
+#slideshow {
+  position: relative;
+  #big_slick {
+    &:hover {
+      .slick-arrow {
+        opacity: 1;
+      }
+    }
+    .slick-arrow {
+      z-index: 100;
+      opacity: 0;
+      transition: opacity .5s;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &.slick-prev {
+        left: 25px;
+        background-image: url('/images/slideshow/left-arrow.png');
+        width: 34px;
+        height: 64px;
+      }
+
+      &.slick-next {
+        right: 25px;
+        background-image: url('/images/slideshow/right-arrow.png');
+        width: 34px;
+        height: 64px;
+      }
+    }
+
+    .slick-slide {
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(black,0.3);
+        z-index: 1;
+      }
+
+      > * {
+        .title_wrapper {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translate(0,-50%);
+          font-family: NotoSansCJKtc-Bold;
+          font-size: 30px;
+          color: white;
+          text-align: center;
+          z-index: 2;
+          width: 100%;
+
+          @media(min-width: 769px) {
+            font-size: 48px;
+          }
+          .sub-title {
+            /* 全球矚目眾籌直播網: */
+            font-family: NotoSansCJKtc-Bold;
+            font-size: 16px;
+
+            @media(min-width: 769px) {
+              font-size: 24px;
+            }
+          }
+        }
+
+        a {
+          position: absolute;
+          z-index: 2;
+          display: inline-block;
+          /* Rectangle-2-Copy-2: */
+          background: #000000;
+          border-radius: 8px;
+          /* 更多直播: */
+          font-family: NotoSansCJKtc-Bold;
+          font-size: 16px;
+          color: white;
+          left: 50%;
+          bottom: 15px;
+          transform: translate(-50%,0);
+          padding: 5px 20px;
+          text-decoration: none;
+
+          @media(min-width: 769px) {
+            padding: 10px 30px;
+            font-size: 18px;
+          }
+          &:hover {
+            opacity: .8;
+          }
+        }
+      }
+    }
+  }
+}
