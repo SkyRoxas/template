@@ -1,0 +1,22 @@
+.region-ranking{
+  ul{
+    li{
+      background: #F1F1F1;
+      margin-bottom: 2px;
+    }
+    li{
+      .field-rank{
+        background: #fff;
+      }
+      .field-image{
+        img{
+          max-width: 185px;
+        }
+      }
+    }
+    li:first-child{
+      background: $main-first;
+    }
+  }
+
+}
