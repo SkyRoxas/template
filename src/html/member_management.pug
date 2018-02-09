@@ -1,3 +1,24 @@
+mixin card(name,text)
+  li.col-4
+    .bg-third.p-4.card-radius.mb-5
+      .field-title.bg-first.card-radius.mb-4 
+        h3.p-2.text-left(style="height:50px;") 活動名稱XXX
+      .wrap.d-flex.mb-4
+        .field-people.col.d-flex.flex-column.align-items-center.bg-first.card-radius.pt-4.pb-2.mr-2
+          div.mb-2
+            img(src="./images/member.png" width="55px")
+          span 100 人
+        .field-time.col.col.d-flex.flex-column.align-items-center.bg-first.card-radius.pt-4.pb-2.ml-2
+          div.mb-2
+            img(src="./images/time2.png" width="55px") 
+          span 2018/12/31       
+      .field-moneny.d-flex.flex-column.align-items-center.bg-first.card-radius.p-3
+        div.mb-3
+          img(src="./images/money2.png" width="55px")
+        span NT.123,456,789
+    a.btn.mb-3 查看訂單
+    a.btn(class=name)=text
+
 doctype html
 html
   head
@@ -8,10 +29,16 @@ html
     title demo
   body.member-page
     include components/header
-    .container
-      .row
-        .col-xl-3
+    .container.py-0
+      .row.d-flex
+        .col-xl-3.d-flex
           include components/sidebar_member
-        .col-xl-9
-          #content
+        .col-xl-9.mt-5
+          #content.my-5.card-radius
+            .container
+              ul.row
+                +card('disable','尚未結束，無法申請撥款')
+                +card('normal','申請撥款')
+                +card('success','已請款')
+                  
     include components/footer

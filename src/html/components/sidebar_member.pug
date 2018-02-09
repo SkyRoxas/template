@@ -1,9 +1,11 @@
 mixin item(text)
- a(href='/')=text
+ li
+   a(href='/')=text
  
 
 #sidebar-member.sidebar
   .container
+    h2 會員中心
     ul
       +item('頻道設定')
       +item('直播管理')
