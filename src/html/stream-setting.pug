@@ -6,7 +6,9 @@ html
     include components/head/style
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title setting
-  body
+  body.page-setting
     include components/header
-    include components/setting-step
+    main.main
+        include components/setting-step
+        include components/setting-id-block
     include components/footer
