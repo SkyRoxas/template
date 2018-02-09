@@ -1,0 +1,13 @@
+mixin item(text)
+ a(href='/')=text
+ 
+
+#sidebar-member.sidebar
+  .container
+    ul
+      +item('頻道設定')
+      +item('直播管理')
+      +item('贊助紀錄')
+      +item('帳戶設定')
+      
+  

@@ -6,8 +6,12 @@ html
     include components/head/style
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title demo
-  body
-    include components/header_login
-    include components/stream/chat
-    include components/stream/navigation
+  body.member-page
+    include components/header
+    .container
+      .row
+        .col-xl-3
+          include components/sidebar_member
+        .col-xl-9
+          #content
     include components/footer
