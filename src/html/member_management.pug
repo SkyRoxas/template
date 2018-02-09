@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    include components/head/script
+    include components/head/style
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title demo
+  body.member-page
+    include components/header
+    .container
+      .row
+        .col-xl-3
+          include components/sidebar_member
+        .col-xl-9
+          #content
+    include components/footer
