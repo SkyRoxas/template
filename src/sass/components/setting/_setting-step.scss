@@ -1,17 +1,19 @@
-.page-setting{
-    .main{
+.page-setting {
+    .main {
         background-color: #eee;
     }
 }
+
 .step-nav {
     .items {
         .item {
             .step-link {
                 position: relative;
-                font-size: 46px;
                 color: #212529;
-
-                &.active,&:hover {
+                font-size: 46px;
+                z-index: 1;
+                &.active,
+                &:hover {
                     &:after {
                         position: absolute;
                         z-index: -1;
