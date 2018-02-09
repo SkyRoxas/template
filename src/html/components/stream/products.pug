@@ -1,0 +1,36 @@
+mixin Product(first_img, icon_1 , icon_2)
+  div.col-auto.product_item
+    div.img_wrap
+      img(src=first_img)
+    div.product_details
+      div.row
+        div.col-6
+          div.row
+            div.icon.col-auto
+              img(src=icon_1)
+            div.wrap.col-auto
+              span 寄送時間
+              span.time 2018/12/31
+        div.col-6
+          div.row
+            div.icon.col-auto
+              img(src=icon_2)
+            div.wrap.col-auto
+              span 剩餘數量
+              span.quantity 888,888,888
+    div.product_price
+      div.row
+        div.col-auto
+          div.product_name 商品名稱
+          div.price $ 15,000
+        div.col-auto
+
+
+div#products
+  div.wrap
+    div.row.product_list
+      +Product('/images/product1.png','1','2')
+      +Product('/images/product2.png','1','2')
+      +Product('/images/product3.png','1','2')
+      +Product('/images/product4.png','1','2')
+  a(href="/") 我要贊助
