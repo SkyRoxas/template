@@ -6,6 +6,12 @@ $main-first:#FD9B3C;
 $main-second:#F0B809;
 $main-third:#F5862D;
 
+$btn-first:#2D2D2D;
+$btn-second:#BBBDBE;
+$btn-normal:#FD9B3C;
+$btn-error:#C20016;
+$btn-success:#EED490;
+
 .bg-first{
   background: $bg-first;
 }
@@ -16,4 +22,18 @@ $main-third:#F5862D;
 
 .bg-third{
   background: $bg-third;
+}
+
+.btn.disable{
+  background: $btn-error!important;
+  color: #fff!important;
+}
+.btn.normal{
+  background: $btn-normal!important;
+  color: #fff!important;
+}
+
+.btn.success{
+  background: $btn-success!important;
+  color: #fff!important;
 }
