@@ -1,0 +1,135 @@
+#products {
+  padding: 50px 0;
+  background-color: rgba(black,0.8);
+
+  > .wrap {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: white;
+
+    .product_list {
+      .product_item {
+
+        &.active {
+          .content_wrap {
+            border-color: #FFAB4C;
+          }
+
+          .product_price {
+            .check {
+              background-color: #FFAB4C;
+            }
+          }
+        }
+
+        .content_wrap {
+          padding: 5px;
+          border: 4px solid #D8D8D8;
+          cursor: pointer;
+
+          .img_wrap {
+            img {
+              width: 100%;
+            }
+          }
+
+          .product_details {
+            overflow: hidden;
+
+            > .d-flex {
+              > * {
+                flex-basis: 50%;
+                max-width: 50%;
+
+                .bg {
+                  padding: 5px 0;
+                  overflow: hidden;
+
+                  > * {
+                    align-items: center;
+                    justify-content: space-around;
+
+                    .wrap {
+                      span {
+                        display: block;
+                        /* 寄送時間: */
+                        font-family: NotoSansCJKtc-Regular;
+                        font-size: 14px;
+                        color: white;
+
+                        &.time {
+                          margin-top: 5px;
+                          color: #C2002F;
+                        }
+
+                        &.quantity {
+                          margin-top: 5px;
+                          color: #FFAB4C;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                &.left {
+                  background-color: #F4C300;
+                }
+
+                &.right {
+                  background-color: black;
+                }
+              }
+            }
+          }
+
+          .product_price {
+            padding: 10px;
+
+            .product_name {
+              /* 商品名稱: */
+              font-family: NotoSansCJKtc-Regular;
+              font-size: 14px;
+              color: #000000;
+            }
+
+            .price {
+              /* $ 15,000: */
+              font-family: NotoSansCJKtc-Regular;
+              font-size: 14px;
+              color: #E55B25;
+              margin-top: 10px;
+            }
+          }
+
+          .check {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(gray,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    > a.support {
+      background-color: #E8380D;
+      display: block;
+      font-size: 18px;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      margin-top: 20px;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
