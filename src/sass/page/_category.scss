@@ -1,0 +1,39 @@
+.page-category{
+  .categoryNav{
+    ul{
+      display: block;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      li{
+        a{
+          display: block;
+          text-align: center;
+          padding: 40px 20px;
+          font-weight: bold;
+          font-size: 23px;
+          &.active{
+            color: #000;
+            &:after{
+              content:"";
+              display: block;
+              height: 10px;
+              width: 100%;
+              background: $main-first;
+              position: absolute;
+              bottom: 0px;
+              left: 0px;
+            }
+          }
+        }
+        &:first-child{
+            margin-left: 250px;
+          @include media-breakpoint-down(lg){
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}

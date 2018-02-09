@@ -1,13 +1,37 @@
+mixin streamingList()
+  li.col-xl-4.col-lg-6.col-md-6.col-12.my-4
+    .wrap.shadow
+      .field-image
+        img(src="/images/streaming.png")
+      .field-body.d-flex.align-items-center.py-3.px-3
+        .field-perfile.pr-2
+          img(src="/images/icon/user.png" width="40px")
+        .wrap
+          .field-title.mb-2
+            h3 活動名稱
+          .field-user id / 直播主名稱
 mixin categoryList(main,second)
   .div.mb-5
-    .container
+    .container.py-5
       .row
-        div.py-5
-          h2.mb-5 
+        .col-auto.py-lg-5
+          h2.mb-lg-5 
             span.d-block.mb-3=main
             div=second 
-        .col
-          include regions/category
+        .col-lg.col-12
+          .region-streaming.pt-5
+              div
+                ul.row
+                  +streamingList
+                  +streamingList
+                  +streamingList
+                  +streamingList
+                  +streamingList
+                  +streamingList
+                  +streamingList
+                  +streamingList
+                  +streamingList
+                div.btn.btn-dark.btn-lg.px-5.my-5 更多直播
 
 
 doctype html
@@ -17,14 +41,14 @@ html
     include components/head/style
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title demo
-  body
+  body.page-category
     include components/header
-    div.categoryNav.bg-second
-      ul.d-flex.pt-5
-        li 
-          h3 累計最高贊助金額
-        li 
-          h3 最多贊助人數
+    div.categoryNav.bg-third.pt-5.d-flex.justify-content-center
+      ul.row.d-flex.no-gutters
+        li.col
+          a.active.d-block(href="/") 累計最高贊助金額
+        li.col
+          a.d-block(href="/") 最多贊助人數
     div
       +categoryList('活動','Events')
       +categoryList('活動','Events')
