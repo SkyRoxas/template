@@ -5,7 +5,8 @@
                 position: relative;
                 font-size: 46px;
                 color: #212529;
-                &:hover {
+
+                &.active,&:hover {
                     &:after {
                         position: absolute;
                         z-index: -1;
