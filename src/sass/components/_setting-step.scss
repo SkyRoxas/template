@@ -1,0 +1,27 @@
+.step-nav {
+    .items {
+        .item {
+            .step-link {
+                position: relative;
+                font-size: 46px;
+                color: #212529;
+                &:hover {
+                    &:after {
+                        position: absolute;
+                        z-index: -1;
+                        bottom: 4px;
+                        display: block;
+                        width: 155px;
+                        height: 7px;
+                        content: '';
+                        background-color: #ffab4c;
+                    }
+                }
+            }
+
+            span {
+                font-size: 29px;
+            }
+        }
+    }
+}
