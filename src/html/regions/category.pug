@@ -1,5 +1,5 @@
 mixin streamingList()
-  li.col-lg-3.col-12.mb-4
+  li.col-lg-4.col-12.mb-4
     .wrap.shadow
       .field-image
         img(src="/images/streaming.png")
@@ -12,11 +12,7 @@ mixin streamingList()
           .field-user id / 直播主名稱
       
       
-.region-streaming.bg-second.pt-3
-  .container
-    h2.mb-5 
-      span 進行中的直播
-      div STREAMING
+.region-streaming.pt-3
     div
       ul.row
         +streamingList
@@ -27,4 +23,5 @@ mixin streamingList()
         +streamingList
         +streamingList
         +streamingList
-      div.btn.btn-dark.btn-lg.pl-5.pr-5 更多直播
+        +streamingList
+      div.btn.btn-dark.btn-lg.px-5.my-5 更多直播

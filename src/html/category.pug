@@ -1,0 +1,33 @@
+mixin categoryList(main,second)
+  .div.mb-5
+    .container
+      .row
+        div.py-5
+          h2.mb-5 
+            span.d-block.mb-3=main
+            div=second 
+        .col
+          include regions/category
+
+
+doctype html
+html
+  head
+    include components/head/script
+    include components/head/style
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title demo
+  body
+    include components/header
+    div.categoryNav.bg-second
+      ul.d-flex.pt-5
+        li 
+          h3 累計最高贊助金額
+        li 
+          h3 最多贊助人數
+    div
+      +categoryList('活動','Events')
+      +categoryList('活動','Events')
+      +categoryList('活動','Events')
+      +categoryList('活動','Events')
+    include components/footer
