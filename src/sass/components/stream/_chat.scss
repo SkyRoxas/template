@@ -1,7 +1,7 @@
 #chat {
   position: relative;
   overflow: hidden;
-  
+
   .img_wrap {
     position: relative;
     &::before {
@@ -56,9 +56,11 @@
 
           .username {
             white-space: nowrap;
-            border-right: 1px solid white;
             font-size: 14px;
 
+            @media(min-width: 576px) {
+              border-right: 1px solid white;
+            }
             div {
               padding: 5px 0px;
             }
