@@ -1,15 +1,17 @@
-mixin item(text)
- li
-   a(href='/')=text
- 
+mixin item(text,state)
+  li.mb-4.col-xl-12.col-6
+    if state ==='active'
+      a.btn.text-left.px-4.active(href='/')=text
+    else
+      a.btn.text-left.px-4(href='/')=text
 
-#sidebar-member.sidebar
-  .container
-    h2 會員中心
-    ul
+
+
+#sidebar-member.sidebar.pt-4
+  .container.mt-5.d-flex.flex-column.align-items-center
+    h2.mb-4.text-center 會員中心
+    ul.row.d-flex.justify-content-center.flex-wrap
       +item('頻道設定')
-      +item('直播管理')
+      +item('直播管理','active')
       +item('贊助紀錄')
       +item('帳戶設定')
-      
-  

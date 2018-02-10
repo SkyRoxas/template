@@ -1,4 +1,15 @@
 .sidebar{
   background: $bg-first;
   width: 100%;
+  .btn.active{
+    background: $btn-second;
+  }
+  h2{
+    font-size: 20px;
+  }
+  ul{
+    @include media-breakpoint-up(lg){
+      max-width: 240px;
+    }
+  }
 }
