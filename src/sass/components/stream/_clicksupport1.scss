@@ -1,7 +1,14 @@
 #products {
   .product_list {
     .product_item {
+      &.active {
+        .product_quantity_wrap {
+          display: block;
+        }
+      }
       .product_quantity_wrap {
+        display: none;
+
         .quantity_input {
           margin-top: 20px;
           display: flex;
@@ -75,7 +82,8 @@
       > * {
         padding: 20px;
 
-        .clear {
+        .clear,
+        .prev {
           background-color: #53585A;
           border: none;
           padding: 15px 50px;

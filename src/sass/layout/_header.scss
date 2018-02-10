@@ -2,9 +2,11 @@
   background: $bg-first;
   box-shadow: 0 5px 5px rgba(0,0,0,0.2);
   position: relative;
-  z-index: 1;
+  z-index: 3;
   .header_wrapper {
-    > .row {
+    > .d-flex {
+      position: relative;
+      flex-wrap: wrap;
       justify-content: center;
 
       @media(min-width: 1041px) {
