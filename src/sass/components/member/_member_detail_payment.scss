@@ -1,0 +1,78 @@
+.upload_picutes_wrap {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px 10px;
+  border-radius: 5px;
+
+  form {
+    input {
+      display: none;
+    }
+    .upload {
+      font-size: 18px;
+      color: #F4F4F4;
+      background-color: #4A4A4A;
+      padding: 10px 42px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        opacity: .8;
+      }
+    }
+    .title {
+      font-size: 20px;
+      color: #53585A;
+      border-bottom: 2px solid #4A4A4A;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-weight: bold;
+
+      &::before{
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-image: url('/images/billing_title.png');
+        margin-right: 15px;
+      }
+    }
+
+    .bankbook {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .civil {
+      .wrap {
+        display: flex;
+        margin: -10px;
+        > * {
+          padding: 10px;
+        }
+      }
+    }
+
+
+    .actions {
+      margin-top: 85px;
+
+      button {
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        color: #F4F4F4;
+        background-color: #007078;
+        padding: 10px 25px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}

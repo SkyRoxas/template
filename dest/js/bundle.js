@@ -13473,15 +13473,25 @@ var _search = __webpack_require__(5);
 
 var _search2 = _interopRequireDefault(_search);
 
-var _shopping_cart = __webpack_require__(6);
+var _setting_popup = __webpack_require__(6);
+
+var _setting_popup2 = _interopRequireDefault(_setting_popup);
+
+var _shopping_cart = __webpack_require__(7);
 
 var _shopping_cart2 = _interopRequireDefault(_shopping_cart);
+
+var _upload = __webpack_require__(8);
+
+var _upload2 = _interopRequireDefault(_upload);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _slideshow2.default)();
 (0, _carousel2.default)();
 (0, _search2.default)();
+(0, _upload2.default)();
+(0, _setting_popup2.default)();
 // shopping_cart()
 
 /***/ }),
@@ -13604,6 +13614,27 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var jimmy8646_settingPopup = function jimmy8646_settingPopup() {};
+
+exports.default = jimmy8646_settingPopup;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var cart = function cart() {
   (0, _jquery2.default)(function () {
     var products = (0, _jquery2.default)('.product_list');
@@ -13647,6 +13678,38 @@ var cart = function cart() {
 };
 
 exports.default = cart;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var upload = function upload() {
+  (0, _jquery2.default)(function () {
+    var upload_picutes_wrap = (0, _jquery2.default)('.upload_picutes_wrap');
+    var buttons = (0, _jquery2.default)('button:not(.submit)', upload_picutes_wrap);
+
+    buttons.click(function (e) {
+      var $this = e.currentTarget;
+      (0, _jquery2.default)($this).prev().click();
+      e.preventDefault();
+    });
+  });
+};
+
+exports.default = upload;
 
 /***/ })
 /******/ ]);

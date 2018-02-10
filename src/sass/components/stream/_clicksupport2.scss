@@ -1,0 +1,101 @@
+#products {
+  overflow: hidden;
+
+  .form_wrap {
+    margin-top: 30px;
+    form {
+      label:not(.radio) {
+        display: block;
+        font-size: 14px;
+        color: #53585A;
+        margin-bottom: 10px;
+      }
+
+      input:not(.radio) {
+        height: 40px;
+        background-color: #F4F4F4;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        padding-left: 10px;
+      }
+
+      input.radio {
+        margin-right: 20px;
+      }
+
+      label.radio {
+        color: #53585A;
+        font-size: 14px;
+      }
+      .title {
+        font-size: 20px;
+        color: #53585A;
+        border-bottom: 2px solid #4A4A4A;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding-bottom: 5px;
+        font-weight: bold;
+
+        &::before{
+          content: "";
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          background-image: url('/images/billing_title.png');
+          margin-right: 15px;
+        }
+      }
+
+      .row {
+        margin: -15px;
+
+        > * {
+          padding: 15px;
+        }
+      }
+      > .billing {
+        .billing_wrap {
+          max-width: 700px;
+          margin: 30px auto;
+
+          > * {
+            margin-bottom: 30px;
+
+            &:last-child {
+              margin-bottom: 0px;
+            }
+          }
+        }
+      }
+
+      > .payment {
+
+        .payment_wrap,
+        .support_wrap {
+          max-width: 700px;
+          margin: 0 auto;
+
+          .field_wrap {
+
+            > * {
+              display: flex;
+              align-items: center;
+              margin-bottom: 20px;
+
+              &:last-child {
+                margin-bottom: 0px;
+              }
+            }
+          }
+        }
+
+        .payment_wrap {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
