@@ -9,11 +9,22 @@ mixin th(text)
       div.bg-third.p-3.card-radius=text
 
 mixin td(text,type)
-    if(type === 'img')
-      td
-        img(src=text width="45px")
-    else
-      td=text
+  if(type === 'img')
+    td.p-2
+      img(src=text width="45px")
+  else
+    td.p-2=text
+
+mixin infoItem(label,text,arrow)
+  if(arrow!=="right")
+    .wrap.d-flex.align-items-center.p-2.bg-four
+      div(style="width:110px").px-2=label
+      div.col.bg-first.px-4.small.py-2=text
+  else
+    .wrap.d-flex.align-items-center.p-2.bg-first
+      div(style="width:110px").px-2=label
+      div.col.bg-four.px-4.small.py-2=text
+
 
 mixin tr
   tr
@@ -25,27 +36,76 @@ mixin tr
     +td('信用卡')
     +td('已付款')
     +td('./images/member.png','img')
-
-
+  tr.detail
+    td(colspan="8")
+      .container.view
+        .row
+          div.col-9.bg-first.p-2.card-radius
+            div.d-flex.mb-3(style="width:100%;")
+              div
+                +infoItem('贊助人名稱','耶穌')
+              div.col.pr-0
+                +infoItem('寄送地址','(100) 台北市 中正區 重慶南路一段1號1樓')
+            div.d-flex.mb-3(style="width:100%;")
+              div
+                +infoItem('聯絡電話','0912-345-678')
+              div.col.pr-0
+                +infoItem('電子郵件','arronwu@webacker.com')
+            div.d-flex.mb-3(style="width:100%;")
+              div.col.p-0
+                +infoItem('備註','有耶穌快看')
+            div.d-flex(style="width:100%;")
+              div
+                +infoItem('ATM 繳費帳號','23282-2838-2393-2833')
+              div.col.pr-0
+                +infoItem('付款狀態','已付款')
+          div.col-3
+            h3.mb-3 配送狀態
+            div.mb-3
+              +infoItem('贊助人名稱','耶穌','right')
+            div
+              +infoItem('單號','QW34234234','right')
 
 block content
-  .container
-    div.my-2
-      table
-        tr.bg-first.card-radiu
-          +th('交易日期')
-          +th('訂單編號')
-          +th('贊助活動')
-          +th('贊助方案')
-          +th('贊助金額')
-          +th('付款方式')
-          +th('付款狀態')
-          +th('')
-        +tr
-        +tr
-        +tr
-        +tr
-        +tr
-          
+  .container.p-0
+    div.bg-first.p-3.border-radius
+      ul.d-flex.row
+        li.col-lg.col-12.mb-lg-0.mb-3.d-flex
+          div.d-flex.bg-four.align-items-center.justify-content-between.p-3.card-radius(style="width:100%;")
+            div 活動名稱
+        li.col-lg.col-12.mb-lg-0.mb-3
+          div.d-flex.bg-four.align-items-center.justify-content-between.p-3.card-radius
+            div
+              img(src="./images/member.png" width="43px")
+            span 200人
+        li.col-lg.col-12.mb-lg-0.mb-3
+          div.d-flex.bg-four.align-items-center.justify-content-between.p-3.card-radius
+            div
+              img(src="./images/time2.png" width="43px")
+            span 2018/12/31
+        li.col-lg.col-12
+          div.d-flex.bg-four.align-items-center.justify-content-between.p-3.card-radius
+            div
+              img(src="./images/money2.png" width="43px")
+            span NT $123,456,789
+    div.overflow-x.my-2
+      table.mb-5
+        thead
+          tr.bg-first.card-radiu
+            +th('交易日期')
+            +th('訂單編號')
+            +th('贊助活動')
+            +th('贊助方案')
+            +th('贊助金額')
+            +th('付款方式')
+            +th('付款狀態')
+            +th('')
+        tbody
+          +tr
+          +tr
+          +tr
+          +tr
+          +tr
+
       div
         include components/pagger

@@ -1,6 +1,7 @@
 $bg-first: #fff;
 $bg-second: #E1E1E1;
 $bg-third:#F1F1F1;
+$bg-four:#F7F7F7;
 
 $main-first:#FB993B;
 $main-second:#F0B809;
@@ -22,6 +23,10 @@ $btn-success:#EED490;
 
 .bg-third{
   background: $bg-third;
+}
+
+.bg-four{
+  background: $bg-four;
 }
 
 .btn{

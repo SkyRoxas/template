@@ -9,7 +9,10 @@
   }
   ul{
     @include media-breakpoint-up(xl){
-      max-width: 240px;
+      max-width: 170px;
+    }
+    a.btn{
+      padding: 5px 10px;
     }
   }
 }
