@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -13458,226 +13458,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-var _slideshow = __webpack_require__(3);
-
-var _slideshow2 = _interopRequireDefault(_slideshow);
-
-var _carousel = __webpack_require__(4);
-
-var _carousel2 = _interopRequireDefault(_carousel);
-
-var _search = __webpack_require__(5);
-
-var _search2 = _interopRequireDefault(_search);
-
-var _setting_popup = __webpack_require__(6);
-
-var _setting_popup2 = _interopRequireDefault(_setting_popup);
-
-var _shopping_cart = __webpack_require__(7);
-
-var _shopping_cart2 = _interopRequireDefault(_shopping_cart);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-(0, _slideshow2.default)();
-(0, _carousel2.default)();
-(0, _search2.default)();
-(0, _setting_popup2.default)();
-// shopping_cart()
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _slickCarousel = __webpack_require__(1);
-
-var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var slideshow = function slideshow() {
-  (0, _jquery2.default)(document).ready(function () {
-    (0, _jquery2.default)('#big_slick').slick();
-  });
-};
-
-exports.default = slideshow;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _slickCarousel = __webpack_require__(1);
-
-var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var carousel = function carousel() {
-  (0, _jquery2.default)(document).ready(function () {
-    (0, _jquery2.default)('.slider-for').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      zIndex: 1,
-      asNavFor: '.slider-nav'
-    });
-    (0, _jquery2.default)('.slider-nav').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      asNavFor: '.slider-for',
-      dots: true,
-      centerMode: true,
-      focusOnSelect: true
-    });
-  });
-};
-
-exports.default = carousel;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var search = function search() {
-  (0, _jquery2.default)(function () {
-    var form = (0, _jquery2.default)('.search form');
-    var button = (0, _jquery2.default)('input.submit', form);
-
-    button.click(function (e) {
-      button.prev().toggleClass('active');
-    });
-  });
-};
-
-exports.default = search;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var jimmy8646_settingPopup = function jimmy8646_settingPopup() {};
-
-exports.default = jimmy8646_settingPopup;
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _jQuery = __webpack_require__(8);
-
-var _jQuery2 = _interopRequireDefault(_jQuery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var cart = function cart() {
-  (0, _jQuery2.default)(function () {
-    var products = (0, _jQuery2.default)('.product_list');
-
-    products.find('.content_wrap').click(function (e) {
-      var $this = e.currentTarget;
-      (0, _jQuery2.default)($this).parent().toggleClass('active');
-    });
-
-    var product_quantity_wrap = (0, _jQuery2.default)('.product_quantity_wrap');
-    var minus = (0, _jQuery2.default)('.minus', product_quantity_wrap);
-    var plus = (0, _jQuery2.default)('.plus', product_quantity_wrap);
-    var product_price = (0, _jQuery2.default)('.product_price');
-
-    minus.each(function (index, element) {
-      (0, _jQuery2.default)(element).click(function (e) {
-        var $this = e.currentTarget;
-        var quantity = (0, _jQuery2.default)($this).next().val();
-        var price = product_price.eq(index).find('.price span:not(.currency)').text();
-
-        if (quantity > 1) {
-          --quantity;
-          (0, _jQuery2.default)($this).next().focus().val(quantity);
-          (0, _jQuery2.default)($this).parent().next().children('span:not(.currency)').text(quantity * price);
-        }
-      });
-    });
-
-    plus.each(function (index, element) {
-      (0, _jQuery2.default)(element).click(function (e) {
-        var $this = e.currentTarget;
-        var quantity = (0, _jQuery2.default)($this).prev().val();
-        var price = product_price.eq(index).find('.price span:not(.currency)').text();
-
-        ++quantity;
-        (0, _jQuery2.default)($this).prev().focus().val(quantity);
-        (0, _jQuery2.default)($this).parent().next().children('span:not(.currency)').text(quantity * price);
-      });
-    });
-  });
-};
-
-exports.default = cart;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * jQuery JavaScript Library v3.3.1
  * https://jquery.com/
@@ -24044,6 +23824,263 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _slideshow = __webpack_require__(4);
+
+var _slideshow2 = _interopRequireDefault(_slideshow);
+
+var _carousel = __webpack_require__(5);
+
+var _carousel2 = _interopRequireDefault(_carousel);
+
+var _search = __webpack_require__(6);
+
+var _search2 = _interopRequireDefault(_search);
+
+var _setting_popup = __webpack_require__(7);
+
+var _setting_popup2 = _interopRequireDefault(_setting_popup);
+
+var _shopping_cart = __webpack_require__(8);
+
+var _shopping_cart2 = _interopRequireDefault(_shopping_cart);
+
+var _upload = __webpack_require__(9);
+
+var _upload2 = _interopRequireDefault(_upload);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _slideshow2.default)();
+(0, _carousel2.default)();
+(0, _search2.default)();
+(0, _upload2.default)();
+(0, _setting_popup2.default)();
+// shopping_cart()
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _slickCarousel = __webpack_require__(1);
+
+var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var slideshow = function slideshow() {
+  (0, _jquery2.default)(document).ready(function () {
+    (0, _jquery2.default)('#big_slick').slick();
+  });
+};
+
+exports.default = slideshow;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _slickCarousel = __webpack_require__(1);
+
+var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var carousel = function carousel() {
+  (0, _jquery2.default)(document).ready(function () {
+    (0, _jquery2.default)('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      zIndex: 1,
+      asNavFor: '.slider-nav'
+    });
+    (0, _jquery2.default)('.slider-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      dots: true,
+      centerMode: true,
+      focusOnSelect: true
+    });
+  });
+};
+
+exports.default = carousel;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var search = function search() {
+  (0, _jquery2.default)(function () {
+    var form = (0, _jquery2.default)('.search form');
+    var button = (0, _jquery2.default)('input.submit', form);
+
+    button.click(function (e) {
+      button.prev().toggleClass('active');
+    });
+  });
+};
+
+exports.default = search;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var jimmy8646_settingPopup = function jimmy8646_settingPopup() {};
+
+exports.default = jimmy8646_settingPopup;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jQuery = __webpack_require__(2);
+
+var _jQuery2 = _interopRequireDefault(_jQuery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var cart = function cart() {
+  (0, _jQuery2.default)(function () {
+    var products = (0, _jQuery2.default)('.product_list');
+
+    products.find('.content_wrap').click(function (e) {
+      var $this = e.currentTarget;
+      (0, _jQuery2.default)($this).parent().toggleClass('active');
+    });
+
+    var product_quantity_wrap = (0, _jQuery2.default)('.product_quantity_wrap');
+    var minus = (0, _jQuery2.default)('.minus', product_quantity_wrap);
+    var plus = (0, _jQuery2.default)('.plus', product_quantity_wrap);
+    var product_price = (0, _jQuery2.default)('.product_price');
+
+    minus.each(function (index, element) {
+      (0, _jQuery2.default)(element).click(function (e) {
+        var $this = e.currentTarget;
+        var quantity = (0, _jQuery2.default)($this).next().val();
+        var price = product_price.eq(index).find('.price span:not(.currency)').text();
+
+        if (quantity > 1) {
+          --quantity;
+          (0, _jQuery2.default)($this).next().focus().val(quantity);
+          (0, _jQuery2.default)($this).parent().next().children('span:not(.currency)').text(quantity * price);
+        }
+      });
+    });
+
+    plus.each(function (index, element) {
+      (0, _jQuery2.default)(element).click(function (e) {
+        var $this = e.currentTarget;
+        var quantity = (0, _jQuery2.default)($this).prev().val();
+        var price = product_price.eq(index).find('.price span:not(.currency)').text();
+
+        ++quantity;
+        (0, _jQuery2.default)($this).prev().focus().val(quantity);
+        (0, _jQuery2.default)($this).parent().next().children('span:not(.currency)').text(quantity * price);
+      });
+    });
+  });
+};
+
+exports.default = cart;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jQuery = __webpack_require__(2);
+
+var _jQuery2 = _interopRequireDefault(_jQuery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var upload = function upload() {
+  (0, _jQuery2.default)(function () {
+    var upload_picutes_wrap = (0, _jQuery2.default)('.upload_picutes_wrap');
+    var buttons = (0, _jQuery2.default)('button:not(.submit)', upload_picutes_wrap);
+
+    buttons.click(function (e) {
+      var $this = e.currentTarget;
+      (0, _jQuery2.default)($this).prev().click();
+      e.preventDefault();
+    });
+  });
+};
+
+exports.default = upload;
 
 /***/ })
 /******/ ]);

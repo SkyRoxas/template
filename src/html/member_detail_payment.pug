@@ -1,0 +1,23 @@
+extends member.pug
+
+
+block content
+  .container
+    div.upload_picutes_wrap
+      form
+        div.bankbook
+          div.title 請上傳您的存摺封面照片
+          div.field_wrap
+            input(type="file" accept=".png,.jpg")
+            button.upload 上傳
+        div.civil
+          div.title 請上傳您的身分證照片
+          div.wrap
+            div.field_wrap
+              input(type="file" accept=".png,.jpg")
+              button.upload 正面
+            div.field_wrap
+              input(type="file" accept=".png,.jpg")
+              button.upload 反面
+        div.actions
+          button.submit 儲存設定

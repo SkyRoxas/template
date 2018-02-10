@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 const search = ()=> {
-  $(function() {
+  $(() => {
     let form = $('.search form')
     let button = $('input.submit',form)
 
