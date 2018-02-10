@@ -13473,11 +13473,16 @@ var _search = __webpack_require__(5);
 
 var _search2 = _interopRequireDefault(_search);
 
+var _setting_popup = __webpack_require__(6);
+
+var _setting_popup2 = _interopRequireDefault(_setting_popup);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _slideshow2.default)();
 (0, _carousel2.default)();
 (0, _search2.default)();
+(0, _setting_popup2.default)();
 
 /***/ }),
 /* 3 */
@@ -13581,6 +13586,27 @@ var search = function search() {
 };
 
 exports.default = search;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var jimmy8646_settingPopup = function jimmy8646_settingPopup() {};
+
+exports.default = jimmy8646_settingPopup;
 
 /***/ })
 /******/ ]);
