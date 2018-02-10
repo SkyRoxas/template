@@ -1,0 +1,17 @@
+mixin item(pager)
+ li
+   a(href="/").d-block.p-3=pager
+
+.pagger
+  .d-flex.justify-content-center
+    a.btn.d-flex.align-items-center.p-3.mr-3(href="/")
+      <i class="fas fa-angle-double-left"></i>
+    a.btn.d-flex.align-items-center.p-3.mr-3(href="/")
+      <i class="fas fa-angle-left"></i>
+    ul.d-flex.align-items-center.mr-3.bg-third.card-radius
+      -for (var x = 1; x <= 7; x++)
+        +item(x)
+    a.btn.d-flex.align-items-center.p-3.mr-3(href="/")
+      <i class="fas fa-angle-double-right"></i>
+    a.btn.d-flex.align-items-center.p-3(href="/")
+      <i class="fas fa-angle-right"></i>
