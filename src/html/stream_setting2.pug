@@ -8,15 +8,15 @@ html
     include components/head/style
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title setting
-  body.page-setting.setting-step1
+  body.page-setting.setting-step2
     include components/header
     main.main
         nav.container.step-nav(role="navigation")
             ul.d-flex.justify-content-around.items
-                +stepMenuItem('/stream_setting.html','STEP1','頻道設定','active')(class="step1")
-                +stepMenuItem('/stream_setting2.html','STEP2','活動設定')(class="step2")
+                +stepMenuItem('/stream_setting.html','STEP1','頻道設定')(class="step1")
+                +stepMenuItem('/stream_setting2.html','STEP2','活動設定','active')(class="step2")
                 +stepMenuItem('/stream_setting3.html','STEP3','回饋方案')(class="step3")
                 +stepMenuItem('/stream_setting4.html','STEP4','開始直播')(class="step4")
-        div.setting-id-block.container.d-flex.justify-content-center.align-items-center
-            include components/setting/setting_id_form
+        div.setting-channel-block.container.d-flex.justify-content-center.align-items-center
+            include components/setting/setting_channel_form
     include components/footer
