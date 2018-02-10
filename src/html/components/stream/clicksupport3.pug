@@ -1,0 +1,175 @@
+mixin Product(first_img ,active)
+  div.col-sm-6.col-md-6.col-lg-3.product_item(class=active)
+    div.content_wrap
+      div.img_wrap
+        img(src=first_img)
+      div.product_details
+        div.d-flex
+          div.left
+            div.bg
+              div.d-flex
+                div.icon
+                  img(src="/images/time.png")
+                div.wrap
+                  span 寄送時間
+                  span.time 2018/12/31
+          div.right
+            div.bg
+              div.d-flex
+                div.icon
+                  img(src="/images/quantity.png")
+                div.wrap
+                  span 剩餘數量
+                  span.quantity 888,888,888
+      div.product_price
+        div.row.justify-content-between.align-items-center
+          div.col-auto
+            div.product_name 商品名稱
+            div.price
+              span.currency $&nbsp;&nbsp;
+              span 15000
+          div.col-auto
+            div.check
+              <i class="fas fa-check"></i>
+    div.product_quantity_wrap
+      div.quantity_input
+        div.wrap
+          span.minus
+            <i class="fas fa-minus"></i>
+          input(type="text" value="3")
+          span.plus
+            <i class="fas fa-plus"></i>
+      div.total
+        span.currency $&nbsp;&nbsp;
+        span 45000
+
+div#products
+  div.wrap
+    div.row.product_list.justify-content-center
+      +Product('/images/product1.png')
+      +Product('/images/product2.png','active')
+      +Product('/images/product3.png')
+      +Product('/images/product4.png')
+    div.support_input_wrap
+      div.wrap
+        span 額外贊助
+        span +
+        span
+          input(type="text")
+        span =
+        span 總計
+        span.totals NT$ 1500
+    div.form_wrap
+      form
+        div.billing
+          div.title 收件人資訊
+          div.billing_wrap
+            div.name_wrap
+              div.row
+                div.col-sm-6
+                  div.field_wrap
+                    label(for="name") 姓名
+                    input#name(type="text" placeholder="請輸入 收件人 全名")
+                div.col-sm-6
+                  div.field_wrap
+                    label(for="phone") 手機
+                    input#phone(type="tel" placeholder="請輸入 收件人 手機")
+            div.email_wrap
+              div.field_wrap
+                label(for="email") E-mail
+                input#email(type="email" placeholder="請輸入 收件人 email")
+            div.country_wrap
+              div.row
+                div.field_wrap.col-sm-4
+                  label(for="country") 所在國家
+                  input#country(type="text" placeholder="臺灣")
+                div.field_wrap.col-sm-4
+                  label(for="city") 城市 / 洲 / 區
+                  input#city(type="text" placeholder="台北市")
+                div.field_wrap.col-sm-4
+                  label(for="downtown") 選擇鄉鎮市區
+                  input#downtown(type="text" placeholder="大安區")
+            div.address_wrap
+              div.row
+                div.field_wrap.col-sm-3
+                  label(for="zip_code") 郵遞區號
+                  input#zip_code(type="text" placeholder="10345")
+                div.field_wrap.col-sm-9
+                  label(for="address") 詳細地址
+                  input#address(type="text" placeholder="台北市")
+            div.note_wrap
+              div.field_wrap
+                label(for="note") 備註
+                input#note(type="text" placeholder="請輸入備註")
+        div.payment
+          div.title 付款方式
+          div.payment_wrap
+            div.selected_payment_wrap
+              div.field_wrap
+                div.radio
+                  input.radio#credit_cart(type="radio" name="payment")
+                  label.radio(for="credit_cart") 線上刷卡 （信用卡/ 銀聯卡）
+                div.radio
+                  input.radio#convenience(type="radio" name="payment")
+                  label.radio(for="convenience") 超商付款 + $35 （需加收35元手續費，請在48小時內完成付款）
+                div.radio
+                  input.radio#transfer(type="radio" name="payment")
+                  label.radio(for="transfer") ATM轉帳 （請於48小時內完成付款）
+          hr
+          div.support_wrap
+            div.field_wrap
+              div.radio
+                input.radio#support(type='radio' name="support")
+                label.radio(for="support") 我要匿名贊助 （只有實況主和您本人才看得到贊助紀錄）
+        div.credit_card
+          div.title 信用卡付款
+          div.credit_card_wrap
+            div.which_card
+              div.field_wrap
+                div.radio
+                  input#pay.radio(type="radio" name="card")
+                  label.radio(for="pay") 信用卡一次付清
+                div.radio
+                  input#unionpay.radio(type="radio" name="card")
+                  label.radio(for="unionpay") 銀聯卡
+            hr
+            div.card_no
+              div.field_wrap
+                label 信用卡號
+                div.row
+                  div.col-3
+                    input(type="text" placeholder="1234")
+                  div.col-3
+                    input(type="text" placeholder="5678")
+                  div.col-3
+                    input(type="text" placeholder="9012")
+                  div.col-3
+                    input(type="text" placeholder="3456")  
+            div.expired_time
+              div.field_wrap
+                label 有效期限
+                div.row
+                  div.col-3
+                    input(type="text" placeholder="MM")
+                  div.col-3
+                    input(type="text" placeholder="YY")
+            div.code
+              div.field_wrap
+                label 卡片背後末三碼
+                div.row
+                  div.col-3
+                    input(type="text" placeholder="MM")
+            hr
+            div.payer_email
+              div.field_wrap
+                input(type="email" placeholder="填寫付款人電子信箱")
+            hr
+            div.agreement
+              div.field_wrap
+                div.radio
+                  input#agreement.radio(type="radio" name="agreement")
+                  label.radio(for="agreement") 再次確認您的『訂單資訊』和『付款資訊』，付款完成後，智付通將發送通知信至您的信箱 <a href="#">智付通第三方支付金流服務條款</em>            
+        div.actions
+          div.wrap
+            div.button_wrap
+              button.next(tpye="submit") 已閱讀並同意服務條款，確認送出

@@ -20,6 +20,15 @@
         outline: none;
         padding-left: 10px;
       }
+
+      input.radio {
+        margin-right: 20px;
+      }
+
+      label.radio {
+        color: #53585A;
+        font-size: 14px;
+      }
       .title {
         font-size: 20px;
         color: #53585A;
@@ -77,14 +86,6 @@
 
               &:last-child {
                 margin-bottom: 0px;
-              }
-              input {
-                margin-right: 20px;
-              }
-
-              label {
-                color: #53585A;
-                font-size: 14px;
               }
             }
           }

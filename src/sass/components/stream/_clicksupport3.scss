@@ -1,0 +1,43 @@
+#products {
+  .credit_card {
+    margin-top: 30px;
+
+    .credit_card_wrap {
+      max-width: 550px;
+      margin: 0 auto;
+      margin-top: 30px;
+
+      .which_card {
+        .field_wrap {
+          display: flex;
+          justify-content: center;
+          margin: -21px;
+
+          > * {
+            padding: 21px;
+          }
+        }
+      }
+
+      .card_no,
+      .expired_time {
+        margin-bottom: 30px;
+      }
+
+      .agreement {
+        .field_wrap {
+          > .radio {
+            display: flex;
+            align-items: center;
+            color: #A83338;
+            line-height: 20px;
+            
+            a {
+              color: #0084AD;
+            }
+          }
+        }
+      }
+    }
+  }
+}
