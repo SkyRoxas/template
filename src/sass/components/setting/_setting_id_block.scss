@@ -4,6 +4,8 @@
         height: 370px;
         background-color: #ffffff;
         position: relative;
+        margin-bottom: 70px;
+        box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.2);
         .text-description {
             margin-bottom: 1rem;
             padding: 5px 0;
@@ -25,7 +27,7 @@ form.id-setting-form {
         .form-group {
             .id-wrap {
                 padding: 7px;
-
+                flex: 1;
                 .icon-wrap {
                     position: relative;
                     flex-basis: 40px;
@@ -52,7 +54,12 @@ form.id-setting-form {
                     border-radius: 5px;
                 }
             }
-
+            .question{
+                color: #000;
+                margin-left: 15px;
+                flex-basis: 33px;
+                max-width: 33px;
+            }
             .fb-wrap {
                 background-color: #4267b2;
             }

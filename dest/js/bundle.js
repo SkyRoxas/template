@@ -13473,7 +13473,11 @@ var _search = __webpack_require__(5);
 
 var _search2 = _interopRequireDefault(_search);
 
-var _shopping_cart = __webpack_require__(6);
+var _setting_popup = __webpack_require__(6);
+
+var _setting_popup2 = _interopRequireDefault(_setting_popup);
+
+var _shopping_cart = __webpack_require__(7);
 
 var _shopping_cart2 = _interopRequireDefault(_shopping_cart);
 
@@ -13482,6 +13486,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _slideshow2.default)();
 (0, _carousel2.default)();
 (0, _search2.default)();
+(0, _setting_popup2.default)();
 // shopping_cart()
 
 /***/ }),
@@ -13598,7 +13603,28 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _jQuery = __webpack_require__(7);
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var jimmy8646_settingPopup = function jimmy8646_settingPopup() {};
+
+exports.default = jimmy8646_settingPopup;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jQuery = __webpack_require__(8);
 
 var _jQuery2 = _interopRequireDefault(_jQuery);
 
@@ -13649,7 +13675,7 @@ var cart = function cart() {
 exports.default = cart;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
