@@ -1,0 +1,26 @@
+div.setting-block.border.rounded.p-2
+    div.text-description.d-flex.justify-content-start.align-items-center
+        i.fas.fa-chevron-circle-right.fa-2x(aria-hidden='true')
+        div.text 您的直播頻道 ID
+    form.id-setting-form
+        div.form-wrap
+            div.form-group
+                div.fb-wrap.d-flex.id-wrap
+                    div.icon-wrap.d-flex.justify-content-center.align-items-center
+                        i.fab.fa-facebook-f.fa-2x(aria-hidden='true')
+                    input.no-br(placeholder='請輸入 facebook 直播 id')
+            div.form-group
+                div.youtube-wrap.d-flex.id-wrap
+                    div.icon-wrap.d-flex.justify-content-center.align-items-center
+                        i.fab.fa-youtube.fa-2x(aria-hidden='true')
+                    input.no-br(placeholder='請輸入 youtube 直播 id')
+            div.form-group
+                div.twitch-wrap.d-flex.id-wrap
+                    div.icon-wrap.d-flex.justify-content-center.align-items-center
+                        i.fab.fa-twitch.fa-2x(aria-hidden='true')
+                    input.no-br(placeholder='請輸入 twitch 直播 id')
+            div.form-group
+                div.form-check.form-check-inline
+                    input#sync-id.form-check-input(type='checkbox' name='sync-id')
+                    label.form-check-label(for='sync-id') 更新資訊至會員資料中
+        button.btn.btn-dark.px-4.edit-submit(type="submit") 下一步
