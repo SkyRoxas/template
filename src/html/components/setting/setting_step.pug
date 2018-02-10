@@ -2,10 +2,3 @@ mixin stepMenuItem(href,step,text,active)
     li(class!=attributes.class).p-sm-3.p-md-5.item
         a.d-block.step-link.font-weight-bold(href=href class=active)= step
         span.d-block.text-left.pl-1.font-weight-bold= text
-
-nav.container.step-nav(role="navigation")
-    ul.d-flex.justify-content-around.items
-        +stepMenuItem('/stream-setting.html','STEP1','頻道設定','active')(class="step1")
-        +stepMenuItem('/stream-setting2.html','STEP2','活動設定')(class="step2")
-        +stepMenuItem('/stream-setting3.html','STEP3','回饋方案')(class="step3")
-        +stepMenuItem('/stream-setting4.html','STEP4','開始直播')(class="step4")

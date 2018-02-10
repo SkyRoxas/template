@@ -1,0 +1,50 @@
+include ./block_title
+
+div.setting-block.border.rounded.p-2
+    +setting-block-title('直播類型')
+    form.channel-setting-form
+        div.form-wrap
+            div.form-group.d-flex.align-items-center.channel-group
+                div.d-flex.channel-type.align-items-center.justify-content-center
+                    div.form-check.form-check-inline
+                        input#inlineRadio1.d-none.form-check-input(type="radio" name="channelType" value="option1")
+                        label.form-check-label.activity.d-flex.align-items-center.justify-content-center(for="inlineRadio1") 活動
+                    div.form-check.form-check-inline
+                        input#inlineRadio2.d-none.form-check-input(type="radio" name="channelType" value="option2")
+                        label.form-check-label.charity.d-flex.align-items-center.justify-content-center(for="inlineRadio2") 公益
+                    div.form-check.form-check-inline
+                        input#inlineRadio3.d-none.form-check-input(type="radio" name="channelType" value="option3")
+                        label.form-check-label.sales.d-flex.align-items-center.justify-content-center(for="inlineRadio3") 銷售
+                    div.form-check.form-check-inline
+                        input#inlineRadio4.d-none.form-check-input(type="radio" name="channelType" value="option4")
+                        label.form-check-label.donate.d-flex.align-items-center.justify-content-center(for="inlineRadio4") 打賞
+        +setting-block-title('直播名稱')
+        div.form-group.channel-group
+            div.channel-name
+                div.form-wrap.d-flex
+                    input.form-control(type="text" placeholder="請輸入直播名稱")
+        +setting-block-title('募款金額')
+        div.form-group.channel-group
+            div.donate-target
+                div.row
+                    div.col-6
+                        div.bg-wrap.d-flex.align-items-center
+                            input#goal.d-none.form-control(type="radio" name="donateTarget")
+                            label.fake-radio(for="goal")
+                                i.fas.fa-check-circle.fa-2x
+                            div.goal-wrap
+                                div.label 目標金額
+                                input(type="number" min="1")
+                    div.col-6
+                        div.bg-wrap.d-flex.align-items-center
+                            input#nogoal.d-none.form-control(type="radio" name="donateTarget")
+                            label.fake-radio(for="nogoal")
+                                i.fas.fa-check-circle.fa-2x
+                            div.label
+                                div 無目標金額
+        +setting-block-title('結束時間')
+        div.form-group.channel-group
+            div.end-time
+                div.form-wrap.d-flex
+                    input.form-control(type="date" name="endTime")
+        button.btn.btn-dark.px-4.edit-submit(type="submit") 下一步
