@@ -9,6 +9,7 @@ html
   body.page-setting
     include components/header
     main.main
-        include components/setting-step
-        include components/setting-id-block
+        include components/setting/setting-step
+        div.setting-id-block.container.d-flex.justify-content-center.align-items-center
+            include components/setting/setting-id-form
     include components/footer

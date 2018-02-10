@@ -1,17 +1,74 @@
-.setting-id-block{
-    .setting-block{
+.setting-id-block {
+    .setting-block {
         width: 400px;
         height: 370px;
         background-color: #ffffff;
-        .text-description{
-            border-bottom: 2px solid #000;
+        position: relative;
+        .text-description {
+            margin-bottom: 1rem;
             padding: 5px 0;
-            .fa-chevron-circle-right{
+            border-bottom: 2px solid #000;
+
+            .fa-chevron-circle-right {
                 margin-right: 15px;
             }
-            .text{
+
+            .text {
                 font-size: 17px;
             }
         }
+    }
+}
+
+form.id-setting-form {
+    .form-wrap {
+        .form-group {
+            .id-wrap {
+                padding: 7px;
+
+                .icon-wrap {
+                    position: relative;
+                    flex-basis: 40px;
+                    max-width: 40px;
+                    color: #fff;
+
+                    &:after {
+                        position: absolute;
+                        right: -5px;
+                        width: 1px;
+                        height: 24px;
+                        content: '';
+                        background-color: #fff;
+                    }
+                }
+
+                input {
+                    position: relative;
+                    overflow: hidden;
+                    flex: 1;
+                    height: 32px;
+                    margin-left: 20px;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+            }
+
+            .fb-wrap {
+                background-color: #4267b2;
+            }
+
+            .youtube-wrap {
+                background-color: #ff0202;
+            }
+
+            .twitch-wrap {
+                background-color: #6441a4;
+            }
+        }
+    }
+    .edit-submit{
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
     }
 }
