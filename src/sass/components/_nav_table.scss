@@ -1,0 +1,11 @@
+table{
+  width: 100%;
+  tr{
+    border-bottom: 20px solid $bg-third;
+
+    td{
+      background: red;
+      border-radius: 20px;
+    }
+  }
+}

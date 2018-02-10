@@ -2,10 +2,10 @@ h2{
   max-width: 450px;
   width: 100%;
   text-align: left;
-  font-size: 45px;
+  font-size: 35px;
   div{
     position: relative;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bold;
     color: #919191;
     &:before{
@@ -15,7 +15,7 @@ h2{
       min-width: 360px;
       height: 5px;
       background: $main-second;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
   }
 }

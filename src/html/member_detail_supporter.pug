@@ -1,0 +1,51 @@
+extends member.pug
+
+mixin th(text)
+  if(text=="")
+    th.p-2.visible-xs
+      div.p-3.card-radius=text
+  else
+    th.p-2
+      div.bg-third.p-3.card-radius=text
+
+mixin td(text,type)
+    if(type === 'img')
+      td
+        img(src=text width="45px")
+    else
+      td=text
+
+mixin tr
+  tr
+    +td('2017-01-28 14:00')
+    +td('QN23463822')
+    +td('捐錢還永生')
+    +td('耶穌')
+    +td('$100')
+    +td('信用卡')
+    +td('已付款')
+    +td('./images/member.png','img')
+
+
+
+block content
+  .container
+    div.my-2
+      table
+        tr.bg-first.card-radiu
+          +th('交易日期')
+          +th('訂單編號')
+          +th('贊助活動')
+          +th('贊助方案')
+          +th('贊助金額')
+          +th('付款方式')
+          +th('付款狀態')
+          +th('')
+        +tr
+        +tr
+        +tr
+        +tr
+        +tr
+          
+      div
+        include components/pagger

@@ -1,3 +1,5 @@
+extends member.pug
+
 mixin card(name,text)
   li.card.col-lg-4.mb-5
     .bg-third.p-4.card-radius.mb-5
@@ -25,26 +27,14 @@ mixin card(name,text)
     a.btn.mb-3 查看訂單
     a.btn(class=name)=text
 
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    include components/head/script
-    include components/head/style
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    title demo
-  body.member-page
-    include components/header
-    .container.py-0
-      .row.d-flex
-        .col-xl-3.d-flex
-          include components/sidebar_member
-        .col-xl-9.mt-5
-          #content.my-5.card-radius
-            .container
-              ul.row
-                +card('disable','尚未結束，無法申請撥款')
-                +card('normal','申請撥款')
-                +card('success','已請款')
 
-    include components/footer
+
+block content
+  .container.bg-first.card-radius
+    div.my-2
+      ul.row
+        +card('disable','尚未結束，無法申請撥款')
+        +card('normal','申請撥款')
+        +card('success','已請款')
+      div
+        include components/pagger
