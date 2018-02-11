@@ -10,20 +10,21 @@ mixin th(text)
 
 mixin td(text,type)
   if(type === 'img')
-    td.py-4.px-4
-      img(src=text width="45px")
+    td.px-4
+      div
+        img(src=text width="45px")
   else
     td.py-4.px-4=text
 
 mixin infoItem(label,text,arrow)
   if(arrow!=="right")
-    .wrap.d-flex.align-items-center.p-2.bg-four
-      div(style="width:110px").px-2=label
-      div.col.bg-first.px-4.small.py-2=text
+    .wrap.d-flex.align-items-center.p-1.bg-four
+      div(style="width:90px").px-1=label
+      input.col.bg-first.px-2.no-br.py-2(value=text disabled="disabled")
   else
-    .wrap.d-flex.align-items-center.p-2.bg-first
-      div(style="width:110px").px-2=label
-      div.col.bg-four.px-4.small.py-2=text
+    .wrap.d-flex.align-items-center.p-1.bg-first
+      div(style="width:80px").px-1=label
+      input.col.bg-four.px-2.no-br.py-2(value=text disabled="disabled")
 
 
 mixin tr
@@ -39,59 +40,37 @@ mixin tr
   tr.detail
     td(colspan="8")
       .container.view
-        .row
-          div.col-9.bg-first.p-2.card-radius
+        form.row
+          div.col-9.bg-first.p-4.card-radius
             div.d-flex.mb-3(style="width:100%;")
               div
                 +infoItem('贊助人名稱','耶穌')
               div.col.pr-0
                 +infoItem('寄送地址','(100) 台北市 中正區 重慶南路一段1號1樓')
-            div.d-flex.mb-3(style="width:100%;")
+            div.d-flex.mb-3
               div
                 +infoItem('聯絡電話','0912-345-678')
               div.col.pr-0
                 +infoItem('電子郵件','arronwu@webacker.com')
-            div.d-flex.mb-3(style="width:100%;")
+            div.d-flex.mb-3
               div.col.p-0
                 +infoItem('備註','有耶穌快看')
-            div.d-flex(style="width:100%;")
-              div
+            div.d-flex
+              div.col.pl-0
                 +infoItem('ATM 繳費帳號','23282-2838-2393-2833')
-              div.col.pr-0
+              div.pr-0
                 +infoItem('付款狀態','已付款')
           div.col-3
             h3.mb-3 配送狀態
             div.mb-3
-              +infoItem('贊助人名稱','耶穌','right')
+              +infoItem('配送單位','耶穌','right')
             div.mb-3
               +infoItem('單號','QW34234234','right')
-            div.d-flex.justify-content-center
-              a.btn.p-1.px-4.card-radius(href="/") 儲存
 
 block content
   .container.p-0
-    div.bg-first.p-3.border-radius
-      ul.d-flex.row
-        li.col-lg.col-12.mb-lg-0.mb-3.d-flex
-          div.d-flex.bg-four.align-items-center.justify-content-between.p-3.card-radius(style="width:100%;")
-            div 活動名稱
-        li.col-lg.col-12.mb-lg-0.mb-3
-          div.d-flex.bg-four.align-items-center.justify-content-between.p-3.card-radius
-            div
-              img(src="./images/member.png" width="43px")
-            span 200人
-        li.col-lg.col-12.mb-lg-0.mb-3
-          div.d-flex.bg-four.align-items-center.justify-content-between.p-3.card-radius
-            div
-              img(src="./images/time2.png" width="43px")
-            span 2018/12/31
-        li.col-lg.col-12
-          div.d-flex.bg-four.align-items-center.justify-content-between.p-3.card-radius
-            div
-              img(src="./images/money2.png" width="43px")
-            span NT $123,456,789
     div.overflow-x.my-2
-      table.mb-5
+      table.my-5
         thead
           tr.bg-first.card-radiu
             +th('交易日期')
