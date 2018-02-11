@@ -1,0 +1,26 @@
+.container
+  div.upload_picutes_wrap
+    h2.text-center.mb-2 撥款申請
+    div 為落實貝果吧使用規範與撥款程序，要麻煩您提供一下資料
+    form.mt-4
+      div.mb-3
+        div.title.mb-3 請提供您的直播影片連結
+        div
+          input.p-3.card-radius.no-br.bg-third(type="text" value="http://ooxxccxxxaaasssoo" style="width:100%")
+      div.bankbook
+        div.title 請上傳您的存摺封面照片
+        div.field_wrap
+          input(type="file" accept=".png,.jpg")
+          button.upload 上傳
+      div.civil
+        div.title 請上傳您的身分證照片
+        div.wrap
+          div.field_wrap
+            input(type="file" accept=".png,.jpg")
+            button.upload 正面
+          div.field_wrap
+            input(type="file" accept=".png,.jpg")
+            button.upload 反面
+      div.actions
+        div.mb-3 送出申請後撥款流程需要7個工作天，請耐心等候
+        button.submit 儲存設定
