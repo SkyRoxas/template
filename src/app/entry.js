@@ -6,6 +6,7 @@ import shopping_cart from './shopping_cart.js'
 import upload from './upload.js'
 import tableSlide from './table'
 import memberPopup from './member_popup'
+import ResponsiveMenu from './header.js';
 
 slideshow()
 carousel()
@@ -14,4 +15,5 @@ upload()
 tableSlide()
 jimmy8646_settingPopup()
 memberPopup()
+ResponsiveMenu()
 // shopping_cart()
