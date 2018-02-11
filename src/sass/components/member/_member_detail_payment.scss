@@ -9,6 +9,10 @@
     input {
       display: none;
     }
+    .img_wrap {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
     .upload {
       font-size: 18px;
       color: #F4F4F4;
@@ -50,6 +54,11 @@
       .wrap {
         display: flex;
         margin: -10px;
+
+        &.uploaded {
+          display: block;
+          text-align: left;
+        }
         > * {
           padding: 10px;
         }

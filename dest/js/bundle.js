@@ -13485,12 +13485,17 @@ var _upload = __webpack_require__(8);
 
 var _upload2 = _interopRequireDefault(_upload);
 
+var _table = __webpack_require__(9);
+
+var _table2 = _interopRequireDefault(_table);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _slideshow2.default)();
 (0, _carousel2.default)();
 (0, _search2.default)();
 (0, _upload2.default)();
+(0, _table2.default)();
 (0, _setting_popup2.default)();
 // shopping_cart()
 
@@ -13614,7 +13619,16 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var jimmy8646_settingPopup = function jimmy8646_settingPopup() {};
+var jimmy8646_settingPopup = function jimmy8646_settingPopup() {
+  (0, _jquery2.default)(document).ready(function () {
+    (0, _jquery2.default)('form.id-setting-form .popup').on('click', function () {
+      (0, _jquery2.default)(this).next().fadeToggle();
+    });
+    (0, _jquery2.default)('.popuptext .close').on('click', function () {
+      (0, _jquery2.default)(this).parents('.popuptext').prev().trigger('click');
+    });
+  });
+};
 
 exports.default = jimmy8646_settingPopup;
 
@@ -13710,6 +13724,33 @@ var upload = function upload() {
 };
 
 exports.default = upload;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var tableSlide = function tableSlide() {
+  (0, _jquery2.default)(document).ready(function () {
+    (0, _jquery2.default)('tr').on('click', function () {
+      (0, _jquery2.default)(this).next().find('.view').slideToggle();
+    });
+  });
+};
+
+exports.default = tableSlide;
 
 /***/ })
 /******/ ]);

@@ -2,8 +2,12 @@ $tr-radius: 20%;
 $tr-radius-second: 6%;
 
 table {
-  width: 100%;
+  min-width: 100%;
   white-space: nowrap;
+  font-size: 10px;
+  .view{
+    display: none;
+  }
 
   tr {
     border-bottom: 10px solid $bg-third;
@@ -22,6 +26,9 @@ table {
 
   tbody {
     tr {
+      &:not(.detail){
+        cursor: pointer;
+      }
       &:nth-child(4n+3) {
         background: $bg-four;
       }
@@ -32,6 +39,9 @@ table {
     }
   }
   h3{
+    font-size: 18px;
+  }
+  .btn{
     font-size: 18px;
   }
 }
