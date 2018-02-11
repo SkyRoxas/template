@@ -1,0 +1,42 @@
+div#social_login_page
+  div.wrap
+    div.social_login
+      div.title 社群登入
+      div.social
+        div.fb
+          a(href="#")
+            div.img_wrap
+              img(src="/images/fb.png")
+            div.text facebook 登入
+        div.google
+          a(href="#")
+            div.img_wrap
+              img(src="/images/google.png")
+            div.text google plus 登入
+        div.twitch
+          a(href="#")
+            div.img_wrap
+              img(src="/images/twitch.png")
+            div.text twitch 登入
+    div.local
+      div.title 群募貝果 帳號登入
+      form
+        div.email
+          input(type="email" placeholder="請輸入 email 信箱")
+        div.pass
+          input(type="password" placeholder="請輸入密碼")
+
+        div.actions
+          div.rem
+            div.checkbox
+              input#me(type="checkbox")
+              label(for="me") 記住我
+          div.button_wrap
+            div.wrap
+              input.cancel(type="submit" value="取消")
+            div.wrap
+              input.login(type="submit" value="登入")
+    div.other_links
+      a(href="#") 註冊帳號
+      a(href="#") 忘記密碼
+      a(href="#") 補發認證信
