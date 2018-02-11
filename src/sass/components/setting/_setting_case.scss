@@ -1,0 +1,77 @@
+.setting-case-block {
+    .setting-block {
+        position: relative;
+        width: 800px;
+        height: 555px;
+        margin-bottom: 70px;
+        background-color: #ffffff;
+        box-shadow: 0 0 45px 5px rgba(0,0,0,0.2);
+    }
+}
+
+.case-setting-form {
+    .form-wrap {
+        .case-card {
+            position: relative;
+            display: block;
+            flex-basis: 33.3333%;
+
+            .bg-wrap {
+                height: 300px;
+                padding: 7px;
+                background-color: #eee;
+
+                .img-wrap {
+                    img {}
+
+                    .info-wrap {
+                        .time-wrap {
+                            background-color: #f4c300;
+
+                            .fa-clock {
+                                color: #FFFFFF;
+                            }
+
+                            .title-wrap {
+                                color: #ffffff;
+                                .time{
+                                    color: #c5092e;
+                                }
+                            }
+                        }
+
+                        .quantity-wrap {
+                            background-color: #000000;
+                            .fa-square{
+                                color: #ffffff;
+                            }
+                            .title-wrap {
+                                color: #ffffff;
+                                .quantity{
+                                    color: #f1a148;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .close {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 45px;
+                height: 45px;
+                opacity: 1;
+                color: #fff;
+                border: 4px solid #fff;
+                border-radius: 50%;
+                background-color: #FF2600;
+                font-size: 28px;
+            }
+        }
+    }
+}

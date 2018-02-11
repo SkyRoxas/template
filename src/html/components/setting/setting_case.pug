@@ -1,0 +1,24 @@
+include ./block_title
+
+div.setting-block.border.rounded.p-2
+    +setting-block-title('回饋內容')
+    form.case-setting-form
+        div.form-wrap.d-flex
+            div.case-card
+                div.bg-wrap.rounded
+                    div.img-wrap
+                        img(src="/images/stream_case.jpg")
+                        div.info-wrap.d-flex
+                            div.d-flex.time-wrap
+                                i.far.fa-clock.fa-3x
+                                div.title-wrap
+                                    label 寄送時間
+                                    div.time
+                                        p 2018/12/31
+                            div.d-flex.quantity-wrap
+                                i.far.fa-square.fa-3x
+                                div.title-wrap
+                                    label 剩餘數量
+                                    div.quantity
+                                        p 888,888,888
+                span.close &times;
