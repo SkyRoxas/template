@@ -3,7 +3,7 @@
   background-color: #F4F4F4;
   position: relative;
 
-  @media(min-width: 1001px) {
+  @media(min-width: 1073px) {
     display: none;
   }
 
@@ -166,6 +166,7 @@
           background-repeat: no-repeat;
         }
         .search_close {
+          cursor: pointer;
           position: absolute;
           right: 10px;
           top: 50%;
