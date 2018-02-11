@@ -7,6 +7,7 @@ import upload from './upload.js'
 import tableSlide from './table'
 import memberPopup from './member_popup'
 import copy_text from './copy_text'
+import ResponsiveMenu from './header.js';
 
 slideshow()
 carousel()
@@ -16,4 +17,5 @@ tableSlide()
 jimmy8646_settingPopup()
 memberPopup()
 copy_text()
+ResponsiveMenu()
 // shopping_cart()

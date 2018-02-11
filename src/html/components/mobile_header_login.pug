@@ -1,0 +1,56 @@
+header#mobile_header
+  div.header_wrapper
+    button#toggle
+      img(src="/images/menu_click.png")
+    div.img_wrap
+      a(href="#")
+        img(src="/images/mobile_logo.png")
+    button#search
+      img(src="/images/mobile_search.png")
+  div.mobile_menu
+    div.close_wrap
+      button#close
+        img(src="/images/close.png")
+    ul.menu
+      li.menu_item
+        a(href="#")
+          div.wrap
+            div.img_wrap
+              img(src="/images/home.png")
+            div.text 首頁
+      li.menu_item
+        a(href="#")
+          div.wrap
+            div.img_wrap
+              img(src="/images/stream.png")
+            div.text 瀏覽直播
+      li.menu_item
+        a(href="#")
+          div.wrap
+            div.img_wrap
+              img(src="/images/teaching.png")
+            div.text 教學
+      li.menu_item.has-children
+        a(href="#").has-children
+          div.img_wrap
+            img(src="/images/mobile_avatar.png")
+          div.username aarown wu
+        ul.sub-menu
+          li.sub-menu-item
+            a(href="/")
+              img(src="./images/icon/member-center.png")
+              span 會員中心
+          li.sub-menu-item
+            a(href="/")
+              img(src="./images/icon/live.png")
+              span 我要直播
+          li.sub-menu-item
+            a(href="/")
+              img(src="./images/icon/logout.png")
+              span 會員登出
+  div#search_form
+    form
+      div.input_wrap
+        input(type="text")
+        div.search_close
+          img(src="/images/search-cancel.png")
