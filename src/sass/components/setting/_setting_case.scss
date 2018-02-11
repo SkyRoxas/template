@@ -1,8 +1,6 @@
 .setting-case-block {
     .setting-block {
         position: relative;
-        width: 800px;
-        height: 555px;
         margin-bottom: 70px;
         background-color: #ffffff;
         box-shadow: 0 0 45px 5px rgba(0,0,0,0.2);
@@ -10,47 +8,129 @@
 }
 
 .case-setting-form {
+    position: relative;
+    overflow: hidden;
+
     .form-wrap {
+        margin: -3px;
+
         .case-card {
             position: relative;
-            display: block;
-            flex-basis: 33.3333%;
+            flex-basis: 100%;
+            max-width: 100%;
+            @include media-breakpoint-up(sm){
+                flex-basis: 50%;
+                max-width: 50%;
+            }
 
-            .bg-wrap {
-                height: 300px;
+            @include media-breakpoint-up(md){
+                flex-basis: 33.3333%;
+                max-width: 33.3333%;
+            }
+
+            padding: 3px;
+
+            .padding-wrap {
                 padding: 7px;
                 background-color: #eee;
 
                 .img-wrap {
-                    img {}
+                    img {
+                        width: 100%;
+                    }
 
                     .info-wrap {
                         .time-wrap {
+                            flex: 1;
+                            padding: 10px;
                             background-color: #f4c300;
 
                             .fa-clock {
+                                flex-basis: 30px;
+                                max-width: 30px;
                                 color: #FFFFFF;
                             }
 
                             .title-wrap {
+                                flex: 1;
+                                margin: 0 5px;
                                 color: #ffffff;
-                                .time{
+
+                                > label {
+                                    flex-basis: 100%;
+                                    max-width: 100%;
+                                }
+
+                                .time {
+                                    flex-basis: 100%;
+                                    max-width: 100%;
                                     color: #c5092e;
                                 }
                             }
                         }
 
                         .quantity-wrap {
+                            flex: 1;
+                            padding: 10px;
                             background-color: #000000;
-                            .fa-square{
+
+                            .fa-square {
+                                flex-basis: 30px;
+                                max-width: 30px;
                                 color: #ffffff;
                             }
+
                             .title-wrap {
+                                flex: 1;
+                                margin: 0 5px;
                                 color: #ffffff;
-                                .quantity{
+
+                                > label {
+                                    flex-basis: 100%;
+                                    max-width: 100%;
+                                }
+
+                                .quantity {
+                                    flex-basis: 100%;
+                                    max-width: 100%;
                                     color: #f1a148;
                                 }
                             }
+                        }
+                    }
+                }
+                .description{
+                    .description-wrap{
+                        .feedback{
+                            font-size: 20px;
+                        }
+                        .money{
+                            font-size: 20px;
+                            color: #E55A1F;
+                        }
+                    }
+                    .edit{
+                        .nav {
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 45px;
+                          height: 45px;
+                          background: $btn-first;
+                          color: #fff;
+                          padding: 10px;
+                          border-radius: 50%;
+                          font-size: 15px;
+                          box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+                          transition: 0.5s;
+
+                          &.delete {
+                            background: $btn-second;
+
+                            &:hover {
+                              background: $btn-error;
+                            }
+                          }
                         }
                     }
                 }
@@ -74,4 +154,5 @@
             }
         }
     }
+
 }

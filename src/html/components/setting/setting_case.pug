@@ -1,24 +1,36 @@
 include ./block_title
+mixin caseCard(src,time,quantity,feedback,price)
+    div.case-card
+        div.padding-wrap.rounded
+            div.img-wrap
+                img(src= src)
+                div.info-wrap.d-flex.flex-wrap
+                    div.d-flex.justify-content-between.time-wrap.flex-wrap.align-items-center
+                        i.far.fa-clock.fa-2x
+                        div.title-wrap.d-flex.flex-wrap.align-items-center
+                            label.text-left 寄送時間
+                            div.time.text-left
+                                p= time
+                    div.d-flex.justify-content-between.quantity-wrap.flex-wrap.align-items-center
+                        i.far.fa-square.fa-2x
+                        div.title-wrap.d-flex.flex-wrap.align-items-center
+                            label.text-left 剩餘數量
+                            div.quantity.text-left
+                                p= quantity
+                span.close &times;
+            div.description.d-flex
+                div.description-wrap
+                    div.feedback.text-left.py-2= feedback
+                    div.money.text-left.py-2= price
+                div.edit.ml-auto.mt-auto
+                    a.nav(href="/")
+                      <i class="fas fa-pencil-alt"></i>
 
-div.setting-block.border.rounded.p-2
+div.setting-block.border.rounded.p-2.container
     +setting-block-title('回饋內容')
     form.case-setting-form
-        div.form-wrap.d-flex
-            div.case-card
-                div.bg-wrap.rounded
-                    div.img-wrap
-                        img(src="/images/stream_case.jpg")
-                        div.info-wrap.d-flex
-                            div.d-flex.time-wrap
-                                i.far.fa-clock.fa-3x
-                                div.title-wrap
-                                    label 寄送時間
-                                    div.time
-                                        p 2018/12/31
-                            div.d-flex.quantity-wrap
-                                i.far.fa-square.fa-3x
-                                div.title-wrap
-                                    label 剩餘數量
-                                    div.quantity
-                                        p 888,888,888
-                span.close &times;
+        div.form-wrap.d-flex.flex-wrap
+            +caseCard('/images/stream_case.jpg','2018/12/31','888,888,888','回饋描述','$1,500')
+            +caseCard('/images/stream_case.jpg','2018/12/31','888,888,888','回饋描述','$1,500')
+            +caseCard('/images/stream_case.jpg','2018/12/31','888,888,888','回饋描述','$1,500')
+        button.btn.btn-dark.m-3.px-4.edit-submit(type="submit") 下一步
