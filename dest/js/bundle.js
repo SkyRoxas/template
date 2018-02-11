@@ -13493,6 +13493,10 @@ var _member_popup = __webpack_require__(10);
 
 var _member_popup2 = _interopRequireDefault(_member_popup);
 
+var _copy_text = __webpack_require__(12);
+
+var _copy_text2 = _interopRequireDefault(_copy_text);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _slideshow2.default)();
@@ -13502,6 +13506,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _table2.default)();
 (0, _setting_popup2.default)();
 (0, _member_popup2.default)();
+(0, _copy_text2.default)();
 // shopping_cart()
 
 /***/ }),
@@ -14686,6 +14691,27 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;;(function (ro
     // Export
     return popupS;
 }));
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var copy_text = function copy_text() {};
+
+exports.default = copy_text;
 
 /***/ })
 /******/ ]);

@@ -1,0 +1,22 @@
+include ./block_title
+
+div.setting-block.border.rounded.p-2
+    form.stream-now-form
+        div.form-wrap
+            div.setting-block_title.d-flex.justify-content-start.align-items-center.form-group
+                i.fas.fa-chevron-circle-right.fa-2x(aria-hidden='true')
+                div.text.d-flex
+                    div.sepcial-title 直播bar 連結：請設定在您的直播工具中
+                    i.fas.fa-question-circle.ml-auto
+            div.form-group
+                input#stream-url.no-br.rounded.form-control.text-left(value="http://oxoxoxoxoxoxoxo" readonly)
+                i.far.fa-copy.fa-2x
+            div.setting-block_title.d-flex.justify-content-start.align-items-center.form-group
+                i.fas.fa-chevron-circle-right.fa-2x(aria-hidden='true')
+                div.text.d-flex
+                    div.sepcial-title 贊助連結：請設定在您的頻道下方說明
+                    i.fas.fa-question-circle.ml-auto
+            div.form-group
+                input#donate-url.no-br.rounded.form-control.text-left(value="http://oxoxoxoxoxoxoxo" readonly)
+                i.far.fa-copy.fa-2x
+        button.btn.btn-dark.m-4.px-4.edit-submit(type="submit") 開始直播
