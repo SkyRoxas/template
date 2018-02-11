@@ -13619,7 +13619,16 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var jimmy8646_settingPopup = function jimmy8646_settingPopup() {};
+var jimmy8646_settingPopup = function jimmy8646_settingPopup() {
+  (0, _jquery2.default)(document).ready(function () {
+    (0, _jquery2.default)('form.id-setting-form .popup').on('click', function () {
+      (0, _jquery2.default)(this).next().fadeToggle();
+    });
+    (0, _jquery2.default)('.popuptext .close').on('click', function () {
+      (0, _jquery2.default)(this).parents('.popuptext').prev().trigger('click');
+    });
+  });
+};
 
 exports.default = jimmy8646_settingPopup;
 

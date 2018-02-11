@@ -1,0 +1,35 @@
+extends member.pug
+
+mixin card(name,text)
+  li.card.col-lg-4.mb-5
+    .bg-third.p-4.card-radius.mb-5
+      .field-title.bg-first.card-radius.mb-4 
+        h3.p-2.text-left.small(style="height:50px;") 活動名稱XXX
+      .wrap.d-flex.mb-4
+        .field-people.col.d-flex.flex-column.align-items-center.bg-first.card-radius.pt-4.pb-2.mr-2
+          div.mb-2
+            img(src="./images/member.png" width="55px")
+          span 100 人
+        .field-time.col.col.d-flex.flex-column.align-items-center.bg-first.card-radius.pt-4.pb-2.ml-2
+          div.mb-2
+            img(src="./images/time2.png" width="55px") 
+          span 2018/12/31       
+      .field-wrap
+        .field-moneny.d-flex.flex-column.align-items-center.bg-first.card-radius.p-3
+          div.mb-3
+            img(src="./images/money2.png" width="55px")
+          span NT.123,456,789
+        .field-nav.d-flex.justify-content-between
+          a.nav.delete(href="/")
+            <i class="fas fa-trash-alt"></i>
+          a.nav(href="/")
+            <i class="fas fa-pencil-alt"></i>
+    a.btn.mb-3 查看訂單
+    a.btn(class=name)=text
+
+
+
+block content
+  .container.d-flex.justify-content-center.align-items-center
+    .setting-id-block
+      include components/setting/setting_id_form
