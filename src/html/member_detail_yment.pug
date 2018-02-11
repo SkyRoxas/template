@@ -1,0 +1,30 @@
+extends member.pug
+
+
+block content
+  .container
+    div.upload_picutes_wrap
+      form
+        div.mb-5
+          div.title.mb-3 請上傳您的存摺封面照片
+          div.preview.mb-3
+            img(src="./images/upload.png")
+          div.text-left
+            input(type="file" accept=".png,.jpg")
+            button.upload 上傳
+        div.mb-5
+          div.title.mb-3 請上傳您的身分證照片
+          div.mb-3
+            div.preview.mb-3
+              img(src="./images/upload.png")
+            div.text-left
+              input(type="file" accept=".png,.jpg")
+              button.upload 重新上傳正面
+          div
+            div.preview.mb-3
+              img(src="./images/upload.png")
+            div.text-left
+              input(type="file" accept=".png,.jpg")
+              button.upload 重新上傳反面
+        div.actions
+          button.submit 儲存設定

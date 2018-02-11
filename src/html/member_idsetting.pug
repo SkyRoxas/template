@@ -30,12 +30,6 @@ mixin card(name,text)
 
 
 block content
-  .container.bg-first.card-radius
-    div.my-2
-      ul.row
-        +card('disable','尚未結束，無法申請撥款')
-        +card('normal btn-popup','申請撥款')
-        +card('success','已請款')
-      div
-        include components/pagger
-        include components/member/form_application
+  .container.d-flex.justify-content-center.align-items-center
+    .setting-id-block
+      include components/setting/setting_id_form
