@@ -12,10 +12,12 @@ h2{
       content: "";
       display: block;
       width: 100%;
-      min-width: 360px;
       height: 5px;
       background: $main-second;
       margin-bottom: 10px;
+      @include media-breakpoint-up(lg){
+        min-width: 360px;
+      }
     }
   }
 }
@@ -63,6 +65,22 @@ h3{
     background: $main-first;
     margin-top: 5px;
     width: 120%;
+    height: 5px;
+    bottom: 0px;
+    left: 0px;
+    //z-index: -1;
+  }
+}
+
+.underLine-second{
+  position: relative;
+  font-size: 15px;
+  &:after{
+    content:"";
+    display: block;
+    background: $main-second;
+    margin-top: 5px;
+    width: 100%;
     height: 5px;
     bottom: 0px;
     left: 0px;
