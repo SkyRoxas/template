@@ -19,6 +19,7 @@
         border-radius: 5px;
         outline: none;
         padding-left: 10px;
+        font-size: 16px;
       }
 
       input.radio {
@@ -27,7 +28,7 @@
 
       label.radio {
         color: #53585A;
-        font-size: 14px;
+        font-size: 16px;
       }
       .title {
         font-size: 20px;
@@ -63,6 +64,7 @@
 
           > * {
             margin-bottom: 30px;
+            overflow: hidden;
 
             &:last-child {
               margin-bottom: 0px;
@@ -72,6 +74,7 @@
       }
 
       > .payment {
+        margin-bottom: 35px;
 
         .payment_wrap,
         .support_wrap {
@@ -92,6 +95,9 @@
           }
         }
 
+        .support_wrap {
+          font-weight: bold;
+        }
         .payment_wrap {
           margin-top: 30px;
         }
