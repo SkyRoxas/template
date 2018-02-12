@@ -1,5 +1,5 @@
 mixin Product(first_img ,active)
-  div.col-sm-6.col-md-6.col-lg-3.product_item(class=active)
+  div.col-xs-auto.product_item(class=active)
     div.content_wrap
       div.img_wrap
         img(src=first_img)
@@ -9,7 +9,7 @@ mixin Product(first_img ,active)
             div.bg
               div.d-flex
                 div.icon
-                  img(src="/images/time.png")
+                  img(src="./images/time.png")
                 div.wrap
                   span 寄送時間
                   span.time 2018/12/31
@@ -17,12 +17,12 @@ mixin Product(first_img ,active)
             div.bg
               div.d-flex
                 div.icon
-                  img(src="/images/quantity.png")
+                  img(src="./images/quantity.png")
                 div.wrap
                   span 剩餘數量
-                  span.quantity 888,888,888
+                  span.quantity 888888888
       div.product_price
-        div.row.justify-content-between.align-items-center
+        div.row.justify-content-between.align-items-end
           div.col-auto
             div.product_name 商品名稱
             div.price
@@ -44,12 +44,12 @@ mixin Product(first_img ,active)
         span 45000
 
 div#products
-  div.wrap
+  div.wrap.container
     div.row.product_list.justify-content-center
-      +Product('/images/product1.png')
-      +Product('/images/product2.png','active')
-      +Product('/images/product3.png')
-      +Product('/images/product4.png')
+      +Product('./images/product1.png')
+      +Product('./images/product2.png','active')
+      +Product('./images/product3.png')
+      +Product('./images/product4.png')
     div.support_input_wrap
       div.wrap
         span 額外贊助
@@ -80,21 +80,21 @@ div#products
                 input#email(type="email" placeholder="請輸入 收件人 email")
             div.country_wrap
               div.row
-                div.field_wrap.col-sm-4
+                div.field_wrap.col-4
                   label(for="country") 所在國家
                   input#country(type="text" placeholder="臺灣")
-                div.field_wrap.col-sm-4
+                div.field_wrap.col-4
                   label(for="city") 城市 / 洲 / 區
                   input#city(type="text" placeholder="台北市")
-                div.field_wrap.col-sm-4
+                div.field_wrap.col-4
                   label(for="downtown") 選擇鄉鎮市區
                   input#downtown(type="text" placeholder="大安區")
             div.address_wrap
               div.row
-                div.field_wrap.col-sm-3
+                div.field_wrap.col-3
                   label(for="zip_code") 郵遞區號
                   input#zip_code(type="text" placeholder="10345")
-                div.field_wrap.col-sm-9
+                div.field_wrap.col-9
                   label(for="address") 詳細地址
                   input#address(type="text" placeholder="台北市")
             div.note_wrap
@@ -126,4 +126,4 @@ div#products
             div.button_wrap
               button.prev(tpye="submit") 上一步
             div.button_wrap
-              button.next(tpye="submit") 下一步        
+              button.next(tpye="submit") 下一步

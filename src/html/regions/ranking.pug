@@ -1,42 +1,46 @@
 mixin rankList(rank,icon,amount)
-  li.item.row.p-2
+  li.item.row.p-2.no-gutters
     .wrap.col-5.d-flex
       .field-rank.d-flex.justify-content-center.align-items-center.align-self-start= rank
       .field-image
-        img(src="./images/rank.png")
-    .wrap.col-7.d-flex.align-items-center
+        a(href="/")
+          img(src="./images/rank.png")
+    .wrap.col-7.d-flex.align-items-center.pl-2
       .wrap
-        .field-title.text-left.mb-2 title
+        .field-title.text-left.mb-2
+          a(href="/") title
         .wrap.d-flex.align-items-center.flex-wrap
           .wrap.d-flex.align-items-center
-            .field-prefile.mr-3
-              img(src="./images/icon/user.png" width="36px")
-            .filed-user @arrown wu
-          .field-nav.d-flex.align-items-center.px-2.py-1.ml-xl-1.mt-2
+            .field-prefile
+              a(href="/")
+                img(src="./images/icon/avatar.png" width="36px")
+            .filed-user.px-2
+              a(href="/") @arrown wu
+          .field-nav.d-flex.align-items-center.px-2.py-2.mt-xl-0.mt-2
             div
               img(src=icon width="20px")
             span.ml-2(style="white-space:nowrap")= amount
 
-.region-ranking.pt-3.pb-5
+.region-ranking.pt-3
   .container
-    .row.d-flex.justify-content-between.mb-5.flex-wrap
-      .wrap.d-flex.flex-column.align-items-lg-end.col-lg-5.col-12
+    .row.d-flex.justify-content-between.flex-wrap
+      .wrap.d-flex.flex-column.align-items-lg-end.col-lg-5.col-12.mb-5
         h2.mb-5 
           span.d-block.mb-3 金額排行榜
           div TOP 5 RANKING
-        ul.container.py-0.shadow
-          +rankList(1,'./images/icon/money.png','$23,456,789')
+        ul.container.p-0.shadow
+          +rankList(1,'./images/icon/money_w.png','$23,456,789')
           +rankList(2,'./images/icon/money.png','$23,456,789')
           +rankList(3,'./images/icon/money.png','$23,456,789')
           +rankList(4,'./images/icon/money.png','$23,456,789')
           +rankList(5,'./images/icon/money.png','$23,456,789')
-      .wrap.d-flex.flex-column.align-items-lg-end.col-lg-5.col-12
+      .wrap.d-flex.flex-column.align-items-lg-end.col-lg-5.col-12.mb-5
         h2.mb-5 
           span.d-block.mb-3 人氣排行榜
           div 24H HOT HOT
-        ul.container.py-0.shadow
-          +rankList(1,'./images/icon/people.png','6789')
-          +rankList(2,'./images/icon/people.png','6789')
-          +rankList(3,'./images/icon/people.png','6789')
-          +rankList(4,'./images/icon/people.png','6789')
-          +rankList(5,'./images/icon/people.png','6789')
+        ul.container.p-0.shadow
+          +rankList(1,'./images/icon/member_w.png','6789')
+          +rankList(2,'./images/icon/member.png','6789')
+          +rankList(3,'./images/icon/member.png','6789')
+          +rankList(4,'./images/icon/member.png','6789')
+          +rankList(5,'./images/icon/member.png','6789')

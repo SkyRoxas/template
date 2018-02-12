@@ -13569,7 +13569,7 @@ var carousel = function carousel() {
     (0, _jquery2.default)('.slider-for').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false,
+      // arrows: false,
       fade: true,
       zIndex: 1,
       asNavFor: '.slider-nav'
@@ -13578,9 +13578,20 @@ var carousel = function carousel() {
       slidesToShow: 3,
       slidesToScroll: 1,
       asNavFor: '.slider-for',
-      dots: true,
+      dots: false,
       centerMode: true,
-      focusOnSelect: true
+      focusOnSelect: true,
+      responsive: [{
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
     });
   });
 };

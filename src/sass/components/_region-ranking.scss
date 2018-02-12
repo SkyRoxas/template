@@ -24,13 +24,16 @@
         background: #fff;
         border-radius: 40px;
         img{
-          min-width:20px; 
+          min-width:20px;
         }
       }
     }
     li:first-child{
       background: $main-first;
       color:#fff;
+      a{
+        color:#fff;
+      }
       .field-rank{
           color: #FF2600;
       }

@@ -14,6 +14,10 @@
       left: 0;
       right: 0;
     }
+
+    img {
+      width: 100%;
+    }
   }
 
   .chat_wrap {
@@ -26,13 +30,13 @@
 
     @media(min-width: 769px) {
       position: absolute;
-      max-width: 500px;
+      max-width: 380px;
     }
 
     .current_name {
       /* aarown wu: */
       font-family: NotoSansCJKtc-Regular;
-      font-size: 24px;
+      font-size: 30px;
       color: white;
       text-align: center;
       padding: 20px 10px;
@@ -41,12 +45,15 @@
     }
 
     .contents {
-      height: calc(100% - 200px);
+      height: 400px;
       overflow-y: scroll;
 
+      @media(min-width: 769px) {
+        height: calc(100% - 200px);
+      }
       .content_wrap {
-        padding: 20px;
-        border-bottom: 1px solid #4A4A4A;
+        padding: 14px 10px;
+        border-bottom: 2px solid #4A4A4A;
 
         > * {
           // display: flex;
@@ -71,6 +78,7 @@
 
     .input_area_wrap {
       padding: 10px;
+      border-top: 2px solid #4A4A4A;
 
       > div:not(.actions) {
         background-color: white;

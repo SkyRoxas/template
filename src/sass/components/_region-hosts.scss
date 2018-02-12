@@ -1,0 +1,13 @@
+.region-hosts{
+  @include media-breakpoint-up(lg){
+    ul.min{
+      li{
+        .field-image{
+          img{
+            max-width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
