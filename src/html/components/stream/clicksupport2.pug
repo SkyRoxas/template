@@ -9,7 +9,7 @@ mixin Product(first_img ,active)
             div.bg
               div.d-flex
                 div.icon
-                  img(src="/images/time.png")
+                  img(src="./images/time.png")
                 div.wrap
                   span 寄送時間
                   span.time 2018/12/31
@@ -17,7 +17,7 @@ mixin Product(first_img ,active)
             div.bg
               div.d-flex
                 div.icon
-                  img(src="/images/quantity.png")
+                  img(src="./images/quantity.png")
                 div.wrap
                   span 剩餘數量
                   span.quantity 888888888
@@ -44,12 +44,12 @@ mixin Product(first_img ,active)
         span 45000
 
 div#products
-  div.wrap
+  div.wrap.container
     div.row.product_list.justify-content-center
-      +Product('/images/product1.png')
-      +Product('/images/product2.png','active')
-      +Product('/images/product3.png')
-      +Product('/images/product4.png')
+      +Product('./images/product1.png')
+      +Product('./images/product2.png','active')
+      +Product('./images/product3.png')
+      +Product('./images/product4.png')
     div.support_input_wrap
       div.wrap
         span 額外贊助
