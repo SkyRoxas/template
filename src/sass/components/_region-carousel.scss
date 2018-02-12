@@ -32,4 +32,28 @@
       }
     }
   }
+  .slider-nav{
+    position: relative;
+    button.slick-arrow{
+      left: 25px;
+      width: 34px;
+      height: 64px;
+      position: absolute;
+      top: 35%;
+      z-index: 1;
+      &.slick-prev {
+        background-image: url('/images/slideshow/left-arrow.png');
+        left: 20px;
+      }
+
+      &.slick-next {
+        background-image: url('/images/slideshow/right-arrow.png');
+        right: 20px;
+        left: auto;
+      }
+      &:before{
+        display: none;
+      }
+    }
+  }
 }

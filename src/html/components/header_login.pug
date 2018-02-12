@@ -1,19 +1,23 @@
 mixin headerMenuItem(name,href)
   li.menu-item
-    a.px-5(href=href)= name
+    a.d-flex.align-items-center(href=href)= name
 
 header#header
   div.header_wrapper
-    div.d-flex
-      div.left_links
-        ul.d-flex
-          +headerMenuItem('首頁','/')
-          +headerMenuItem('瀏覽直播','/')
-          +headerMenuItem('教學','/')
-      div.logo
-        div.img_wrap
+    .wrap.d-flex.justify-content-between
+      .d-flex.align-items-center
+        div.logo.mr-2
+          div.img_wrap
+            a(href="/")
+              img(src="./images/logo.png" width="230px")
+        div.company
           a(href="/")
-            img(src="./images/logo.png" width="250px")
+            img(src="./images/company.png" width="170px")
+        div.left_links.ml-2
+          ul.d-flex
+            +headerMenuItem('首頁','/')
+            +headerMenuItem('瀏覽直播','/')
+            +headerMenuItem('教學','/')
       div.right_links
         div.d-flex
           div.search
@@ -23,7 +27,7 @@ header#header
           div.has-children
             a(href="/")
               div.img_wrap
-                img(src="./images/icon/avatar.png")
+                img(src="./images/icon/avatar.png" width="38px")
               span.username aarown wu
             ul.sub-menu
               li.sub-menu-item
@@ -38,5 +42,3 @@ header#header
                 a(href="/")
                   img(src="./images/icon/logout.png")
                   span 會員登出
-          a(href="/")
-            img(src="./images/company.png" width="180px")

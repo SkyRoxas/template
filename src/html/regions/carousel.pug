@@ -35,12 +35,14 @@ mixin carouselNav(src)
     h2.mb-5 
        span.d-block.mb-3 熱門直播
        div Feature
-    .slide-carousel.pb-5
-      ul.slider-for.mb-4
+    .slide-carousel
+      ul.slider-for.mb-4.d-none.d-md-block
+        +carouselItem("./images/carousel.png")
         +carouselItem("./images/carousel.png")
         +carouselItem("./images/carousel.png")
         +carouselItem("./images/carousel.png")
       ul.slider-nav.row
+        +carouselNav("./images/carousel.png")
         +carouselNav("./images/carousel.png")
         +carouselNav("./images/carousel.png")
         +carouselNav("./images/carousel.png")
