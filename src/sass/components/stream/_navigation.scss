@@ -3,6 +3,9 @@
   margin: 0 auto;
   padding: 20px;
 
+  @media(min-width: 1621px) {
+    padding: 20px 0px;
+  }
   .left {
     .username {
       /* @username: */
