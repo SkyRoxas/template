@@ -32,6 +32,49 @@
         margin-bottom: 30px;
       }
 
+      .card_no {
+        .col-3 {
+          position: relative;
+
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+          &::after {
+            position: absolute;
+            width: 10px;
+            height: 2px;
+            background-color: black;
+            right: -4px;
+            top: 50%;
+            transform: translate(0,-50%);
+            content: "";
+            display: block;
+          }
+        }
+      }
+
+      .expired_time {
+        .col-3 {
+          position: relative;
+
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+          &::after {
+            position: absolute;
+            right: -4px;
+            top: 50%;
+            transform: translate(0,-50%);
+            content: "/";
+            display: block;
+            font-size: 20px;
+          }
+        }
+      }
       .code ~ hr{
         margin: 40px 0px;
       }
