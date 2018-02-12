@@ -1,0 +1,20 @@
+mixin href(text,link)
+  li
+    a(href=link target="view_window")=text
+  
+ul
+  +href('首頁','./index.html')
+  +href('集合頁','./category.html')
+  +href('登入','./login.html')
+  +href('會員直播管理','./member_setting.html')
+  +href('會員直播管理表單','./member_detail_personal.html')
+  +href('會員贊助紀錄表單','./member_detail_supporter.html')
+  +href('會員帳戶設定','./member_detail_payment.html')
+  +href('會員帳戶設定編輯','./member_detail_payment_edit.html')
+  +href('商務系統1','./stream_clicksupport.html')
+  +href('商務系統2','./stream_clicksupport2.html')
+  +href('商務系統3','./stream_clicksupport3.html')
+  +href('新增活動直播 step1','./stream_setting.html')
+  +href('新增活動直播 step2','./stream_setting2.html')
+  +href('新增活動直播 step3','./stream_setting3.html')
+  +href('新增活動直播 step4','./stream_setting4.html')

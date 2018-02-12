@@ -20,8 +20,22 @@ h2{
   }
 }
 
+h3{
+  font-size: 13px;
+}
 
-.underLine{
+
+.notice{
+  display: flex;
+  align-items: center;
+  color:#B20024;
+  &:before{
+    content:"●";
+    margin-right:5px;
+  }
+}
+
+.underLine-shadow{
   position: relative;
   padding: 0 10px;
   &:after{
@@ -35,6 +49,23 @@ h2{
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
+    //z-index: -1;
+  }
+}
+
+.underLine{
+  position: relative;
+  padding: 0 10px;
+  font-size: 15px;
+  &:after{
+    content:"";
+    display: block;
+    background: $main-first;
+    margin-top: 5px;
+    width: 120%;
+    height: 5px;
+    bottom: 0px;
+    left: 0px;
     //z-index: -1;
   }
 }
