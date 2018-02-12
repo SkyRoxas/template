@@ -1,0 +1,53 @@
+.setting-case-add-block {
+    .setting-block {
+        position: relative;
+        margin-bottom: 70px;
+        background-color: #ffffff;
+        box-shadow: 0 0 45px 5px rgba(0,0,0,0.2);
+    }
+}
+
+form.add-case-setting-form {
+    .col {
+        .form-group {
+            .input-wrap {
+                .form-control-file {
+                    display: none;
+                }
+
+                .clickme {
+                    display: block;
+                    width: 164px;
+                    height: 55px;
+                    content: '';
+                    background: url("/images/upload_img.png") no-repeat center center;
+                }
+            }
+        }
+
+        .quantity-wrap {
+            .form-check {
+                width: 80px;
+            }
+
+            .input-group {
+                width: 145px;
+                .form-control,
+                .input-group-append,
+                .input-group-prepend {
+                    color: #fff;
+                    background-color: #53585a;
+                }
+
+                .form-control {
+                    width: 75px;
+                }
+            }
+        }
+        .time-wrap{
+            .year-dropdown{
+                margin-right: 10px;
+            }
+        }
+    }
+}
