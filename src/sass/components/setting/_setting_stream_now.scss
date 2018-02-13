@@ -16,11 +16,13 @@ form.stream-now-form {
                 background-color: #eee;
             }
 
-            .fa-copy {
+            .copy {
                 position: absolute;
                 top: 5px;
                 right: 10px;
                 cursor: pointer;
+                background-color: transparent;
+                border: none;
             }
         }
 
