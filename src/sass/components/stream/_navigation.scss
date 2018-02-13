@@ -1,36 +1,53 @@
 #navigation {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 20px;
+  overflow: hidden;
 
-  @media(min-width: 1621px) {
-    padding: 20px 0px;
-  }
-  .left {
-    .username {
-      /* @username: */
-      font-family: NotoSansCJKtc-Regular;
-      font-size: 24px;
-      color: #000000;
-    }
+  .wrap {
+    margin-bottom: -5px;
+    margin-top: -5px;
 
-    .somethingelse {
-      /* Type something: */
-      font-family: NotoSansCJKtc-Black;
-      font-size: 18px;
-      color: #000000;
+    .left {
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      > .row {
+        margin-bottom: -5px;
+        margin-top: -5px;
+
+        .picture_wrap {
+          padding-top: 5px;
+          padding-bottom: 5px;
+
+          .username {
+            /* @username: */
+            font-family: NotoSansCJKtc-Regular;
+            font-size: 24px;
+            color: #000000;
+          }
+        }
+
+        .somethingelse {
+          padding: 5px;
+          /* Type something: */
+          font-family: NotoSansCJKtc-Black;
+          font-size: 18px;
+          color: #000000;
+        }
+      }
     }
-  }
-  .right {
-    a {
-      text-align: center;
-      span {
-        margin-top: 10px;
-        display: block;
-        /* 追蹤: */
-        font-family: NotoSansCJKtc-Bold;
-        font-size: 14px;
-        color: #000000;
+    .right {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      
+      a {
+        text-align: center;
+        span {
+          margin-top: 10px;
+          display: block;
+          /* 追蹤: */
+          font-family: NotoSansCJKtc-Bold;
+          font-size: 14px;
+          color: #000000;
+        }
       }
     }
   }

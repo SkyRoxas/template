@@ -78,11 +78,18 @@
       display: flex;
       justify-content: center;
       font-size: 18px;
-      margin: -30px;
+      margin: -10px -30px;
+      flex-wrap: wrap;
 
       > * {
-        padding: 30px;
+        padding: 10px 30px;
+        flex-basis: 100%;
+        max-width: 100%;
 
+        @media(min-width: 481px) {
+          flex-basis: auto;
+          max-width: none;
+        }
         .clear,
         .prev {
           background-color: #53585A;
@@ -91,6 +98,7 @@
           color: white;
           border-radius: 5px;
           cursor: pointer;
+          width: 100%;
         }
 
         .next {
@@ -99,6 +107,7 @@
           border-radius: 5px;
           padding: 20px 80px;
           cursor: pointer;
+          width: 100%;
         }
       }
     }
