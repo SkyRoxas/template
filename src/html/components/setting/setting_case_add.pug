@@ -17,10 +17,10 @@ div.setting-block.border.rounded.p-2.container
                         label.form-check-label(for="limited") 有限量
                     div.input-group
                         div.input-group-prepend.rounded-left
-                            button.btn.btn-outline-secondary(type="button") -
-                        input.no-br.form-control.text-center(type="text" value="1" min="1" max="100")
+                            button.btn.btn-outline-secondary.qtyminus(type="button" for='updates-feedback-qty') -
+                        input#updates-feedback-qty.no-br.form-control.text-center.quantity(type="text" value="1" min="1" max="100")
                         div.input-group-append.rounded-right
-                            button.btn.btn-outline-secondary(type="button") +
+                            button.btn.btn-outline-secondary.qtyplus(type="button" for='updates-feedback-qty') +
             div.col.col-12.col-md-6
                 +setting-block-title('回饋圖片 (可不上傳圖片)')
                 div.form-group
