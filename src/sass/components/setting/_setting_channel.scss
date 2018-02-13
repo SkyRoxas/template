@@ -1,7 +1,5 @@
 .setting-channel-block {
     .setting-block {
-        width: 400px;
-        height: 555px;
         background-color: #ffffff;
         position: relative;
         margin-bottom: 70px;
@@ -10,6 +8,7 @@
 }
 
 form.channel-setting-form{
+    padding-bottom: 40px;
     .channel-group{
         overflow: hidden;
         .channel-type{
@@ -44,14 +43,16 @@ form.channel-setting-form{
         .channel-name{
             .form-control{
                 flex: 1;
+                background-color: #f4f4f4;
+
             }
         }
         .donate-target{
             .row{
-                .col-6{
+                .wrap{
                     .bg-wrap{
                         padding: 10px;
-                        background-color: #eee;
+                        background-color: #f4f4f4;
                         border-radius: 5px;
                         height: 67px;
                         .fake-radio{
@@ -75,6 +76,12 @@ form.channel-setting-form{
                     }
 
                 }
+            }
+        }
+        .end-time{
+            .form-control{
+                color: #919191;
+                
             }
         }
     }

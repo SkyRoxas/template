@@ -5,17 +5,17 @@ div.setting-block.border.rounded.p-2
     form.channel-setting-form
         div.form-wrap
             div.form-group.d-flex.align-items-center.channel-group
-                div.d-flex.channel-type.align-items-center.justify-content-center
-                    div.form-check.form-check-inline
+                div.d-flex.flex-wrap.channel-type.align-items-center.justify-content-center.row
+                    div.form-check.form-check-inline.col-6.col-sm-3.d-flex.justify-content-center
                         input#inlineRadio1.d-none.form-check-input(type="radio" name="channelType" value="option1")
                         label.form-check-label.activity.d-flex.align-items-center.justify-content-center(for="inlineRadio1") 活動
-                    div.form-check.form-check-inline
+                    div.form-check.form-check-inline.col-6.col-sm-3.d-flex.justify-content-center
                         input#inlineRadio2.d-none.form-check-input(type="radio" name="channelType" value="option2")
                         label.form-check-label.charity.d-flex.align-items-center.justify-content-center(for="inlineRadio2") 公益
-                    div.form-check.form-check-inline
+                    div.form-check.form-check-inline.col-6.col-sm-3.d-flex.justify-content-center
                         input#inlineRadio3.d-none.form-check-input(type="radio" name="channelType" value="option3")
                         label.form-check-label.sales.d-flex.align-items-center.justify-content-center(for="inlineRadio3") 銷售
-                    div.form-check.form-check-inline
+                    div.form-check.form-check-inline.col-6.col-sm-3.d-flex.justify-content-center
                         input#inlineRadio4.d-none.form-check-input(type="radio" name="channelType" value="option4")
                         label.form-check-label.donate.d-flex.align-items-center.justify-content-center(for="inlineRadio4") 打賞
         +setting-block-title('直播名稱')
@@ -27,7 +27,7 @@ div.setting-block.border.rounded.p-2
         div.form-group.channel-group
             div.donate-target
                 div.row
-                    div.col-6
+                    div.wrap.col-12.col-sm-6.py-1
                         div.bg-wrap.d-flex.align-items-center
                             input#goal.d-none.form-control(type="radio" name="donateTarget")
                             label.fake-radio(for="goal")
@@ -35,7 +35,7 @@ div.setting-block.border.rounded.p-2
                             div.goal-wrap
                                 div.label 目標金額
                                 input(type="number" min="1")
-                    div.col-6
+                    div.wrap.col-12.col-sm-6.py-1
                         div.bg-wrap.d-flex.align-items-center
                             input#nogoal.d-none.form-control(type="radio" name="donateTarget")
                             label.fake-radio(for="nogoal")
