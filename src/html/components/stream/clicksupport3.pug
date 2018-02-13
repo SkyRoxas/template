@@ -1,5 +1,5 @@
 mixin Product(first_img ,active)
-  div.col-sm-6.col-md-6.col-lg-3.product_item(class=active)
+  div.col-xs-auto.product_item(class=active)
     div.content_wrap
       div.img_wrap
         img(src=first_img)
@@ -20,9 +20,9 @@ mixin Product(first_img ,active)
                   img(src="./images/quantity.png")
                 div.wrap
                   span 剩餘數量
-                  span.quantity 888,888,888
+                  span.quantity 888888888
       div.product_price
-        div.row.justify-content-between.align-items-center
+        div.row.justify-content-between.align-items-end
           div.col-auto
             div.product_name 商品名稱
             div.price
