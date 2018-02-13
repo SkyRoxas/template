@@ -24,7 +24,7 @@ mixin rankList(rank,icon,amount)
 .region-ranking.pt-3
   .container
     .row.d-flex.justify-content-between.flex-wrap
-      .wrap.d-flex.flex-column.align-items-lg-end.col-lg-5.col-12.mb-5
+      .wrap.d-flex.flex-column.align-items-lg-start.col-lg-5.col-12.mb-5
         h2.mb-5 
           span.d-block.mb-3 金額排行榜
           div TOP 5 RANKING
@@ -35,7 +35,7 @@ mixin rankList(rank,icon,amount)
           +rankList(4,'./images/icon/money.png','$23,456,789')
           +rankList(5,'./images/icon/money.png','$23,456,789')
       .wrap.d-flex.flex-column.align-items-lg-end.col-lg-5.col-12.mb-5
-        h2.mb-5 
+        h2.mb-5.text-lg-right 
           span.d-block.mb-3 人氣排行榜
           div 24H HOT HOT
         ul.container.p-0.shadow
