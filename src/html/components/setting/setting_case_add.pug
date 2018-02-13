@@ -6,10 +6,10 @@ div.setting-block.border.rounded.p-2.container
             div.col.col-12.col-md-6
                 +setting-block-title('支持金額')
                 div.form-group
-                    input.form-control.rounded(type="text" placeholder="NT $")
+                    input.form-control.rounded.bg-five(type="text" placeholder="NT $")
                 +setting-block-title('回饋描述(建議30字以內)')
                 div.form-group
-                    textarea.form-control.rounded(rows="4" placeholder="請輸入回饋描述")
+                    textarea.form-control.rounded.bg-five(rows="4" placeholder="請輸入回饋描述")
                     +setting-block-title('回饋數量')
                 div.form-group.d-flex.quantity-wrap
                     div.form-check.form-check-inline
@@ -17,10 +17,10 @@ div.setting-block.border.rounded.p-2.container
                         label.form-check-label(for="limited") 有限量
                     div.input-group
                         div.input-group-prepend.rounded-left
-                            button.btn.btn-outline-secondary(type="button") -
-                        input.no-br.form-control.text-center(type="text" value="1" min="1" max="100")
+                            button.btn.btn-outline-secondary.qtyminus(type="button" for='updates-feedback-qty') -
+                        input#updates-feedback-qty.no-br.form-control.text-center.quantity(type="text" value="1" min="1" max="100")
                         div.input-group-append.rounded-right
-                            button.btn.btn-outline-secondary(type="button") +
+                            button.btn.btn-outline-secondary.qtyplus(type="button" for='updates-feedback-qty') +
             div.col.col-12.col-md-6
                 +setting-block-title('回饋圖片 (可不上傳圖片)')
                 div.form-group

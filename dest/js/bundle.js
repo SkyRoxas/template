@@ -13501,6 +13501,10 @@ var _header = __webpack_require__(21);
 
 var _header2 = _interopRequireDefault(_header);
 
+var _input_with_control = __webpack_require__(15);
+
+var _input_with_control2 = _interopRequireDefault(_input_with_control);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _slideshow2.default)();
@@ -13512,6 +13516,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _member_popup2.default)();
 (0, _copy_text2.default)();
 (0, _header2.default)();
+(0, _input_with_control2.default)();
 // shopping_cart()
 
 /***/ }),
@@ -26008,6 +26013,59 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var input_control = function input_control() {
+    (0, _jquery2.default)(document).ready(function () {
+        (0, _jquery2.default)('.qtyplus').click(function (e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var fieldName = (0, _jquery2.default)(this).attr('for');
+            // Get its current value
+            var currentVal = parseInt((0, _jquery2.default)('input[id=' + fieldName + ']').val());
+            // If is not undefined
+            if (!isNaN(currentVal)) {
+                // Increment
+                (0, _jquery2.default)('input[id=' + fieldName + ']').val(currentVal + 1);
+            } else {
+                // Otherwise put a 0 there
+                (0, _jquery2.default)('input[id=' + fieldName + ']').val(0);
+            }
+        });
+        (0, _jquery2.default)(".qtyminus").click(function (e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var fieldName = (0, _jquery2.default)(this).attr('for');
+            // Get its current value
+            var currentVal = parseInt((0, _jquery2.default)('input[id=' + fieldName + ']').val());
+            // If it isn't undefined or its greater than 0
+            if (!isNaN(currentVal) && currentVal > 1) {
+                // Decrement one
+                (0, _jquery2.default)('input[id=' + fieldName + ']').val(currentVal - 1);
+            }
+        });
+    });
+};
+
+exports.default = input_control;
 
 /***/ })
 /******/ ]);

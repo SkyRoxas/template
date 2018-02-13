@@ -2,6 +2,7 @@ $bg-first: #fff;
 $bg-second: #E1E1E1;
 $bg-third:#F1F1F1;
 $bg-four:#F7F7F7;
+$bg-five:#f4f4f4;
 
 $main-first:#FB993B;
 $main-second:#F0B809;
@@ -27,6 +28,10 @@ $btn-success:#EED490;
 
 .bg-four{
   background: $bg-four;
+}
+
+.bg-five{
+  background: $bg-five;
 }
 
 .btn{
